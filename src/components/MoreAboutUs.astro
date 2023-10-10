@@ -143,14 +143,21 @@ const alt = "Founder of kitilab";
   };
   const handleCircleMove = function (e) {
     const { currentTarget: target } = e;
+    const width = target.offsetWidth;
     const rect = target.getBoundingClientRect();
-    const circleX = (((e.clientX - rect.left) * 100) / 238 - 50) / 4;
-    const circleY = (((e.clientY - rect.top) * 100) / 238 - 50) / 4;
-    target.style.setProperty("--move-x", circleX + "px");
-    target.style.setProperty("--move-y", circleY + "px");
+    const circleX = e.clientX - rect.left;
+    const circleY = e.clientY - rect.top;
 
-    target.style.setProperty("--move-x-text", circleX / 2 + "px");
-    target.style.setProperty("--move-y-text", circleY / 2 + "px");
+    const centerX = width / 2;
+    const centerY = width / 2;
+
+    const positionX = (circleX - centerX) / 50;
+    const positionY = (circleY - centerY) / 50;
+    target.style.setProperty("--move-x", positionX + "rem");
+    target.style.setProperty("--move-y", positionY + "rem");
+
+    target.style.setProperty("--move-x-text", positionX / 2 + "rem");
+    target.style.setProperty("--move-y-text", positionY / 2 + "rem");
   };
   const resetePosition = function (e) {
     const { currentTarget: target } = e;

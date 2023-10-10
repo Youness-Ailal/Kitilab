@@ -57,6 +57,8 @@ import heroImg from "/images/hero-image2.avif?url";
 
 <script>
   import gsap from "gsap";
+  // import Scrollbar from "smooth-scrollbar";
+  // Scrollbar.init(document.querySelector("#kitilab"));
   const container = document.querySelector(".hero__title--2");
   window.addEventListener("load", () => {
     container.innerHTML = `
@@ -117,18 +119,38 @@ import heroImg from "/images/hero-image2.avif?url";
   const gsapImg = gsap.timeline();
   const heroImgAfter = document.querySelector(".hero__right--after");
   const heroImage = document.querySelector(".hero__image");
-  gsapImg.to(heroImgAfter, {
-    scaleX: 0,
-    transformOrigin: "right",
-    duration: 1,
-    delay: 0.5,
+  if (+window.innerWidth >= 700) {
+    gsapImg.to(heroImgAfter, {
+      scaleX: 0,
+      transformOrigin: "right",
+      duration: 1,
+    });
+    const aniumateImage = gsapImg.to(
+      heroImage,
+      {
+        scale: 1,
+        duration: 1.5,
+      },
+      "=-1"
+    );
+  }
+  const root = document.documentElement;
+  let timeout;
+  window.addEventListener("scroll", () => {
+    // root.style.setProperty("--scroll-color", "#ea580c");
+    gsap.to(":root", {
+      "--scroll-color": "#ea580c",
+      duration: 0.5,
+    });
+
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      gsap.to(":root", {
+        "--scroll-color": "rgb(234, 88, 12, 0.4)",
+        duration: 0.5,
+      });
+      // root.style.setProperty("--scroll-color", "rgb(234, 88, 12, 0.5)");
+    }, 500);
   });
-  const aniumateImage = gsapImg.to(
-    heroImage,
-    {
-      scale: 1,
-      duration: 1.5,
-    },
-    "=-1"
-  );
 </script>

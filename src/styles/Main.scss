@@ -1,0 +1,71 @@
+@font-face {
+  font-family: radio-regular;
+  src: url("/fonts/RadioCanada-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: radio-light;
+  src: url("/fonts/RadioCanada-Light.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: radio-medium;
+  src: url("/fonts/RadioCanada-Medium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: radio-semi;
+  src: url("/fonts/RadioCanada-SemiBold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: radio-bold;
+  src: url("/fonts/RadioCanada-Bold.ttf");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: clamp(4px, 0.5vw, 10px);
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  background-color: #140602;
+  color: #fff7ed;
+  line-height: 1.4;
+  font-family: radio-regular, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+a,
+button,
+li {
+  font-family: inherit;
+  transition: 0.3s;
+}
+button:active,
+a:active {
+  scale: 0.95;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  transition: 0.2s;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color);
+  border-radius: 10rem;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgb(234, 88, 12, 1);
+  }
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(234, 88, 12, 0.1);
+}
+:root {
+  --scroll-color: rgb(234, 88, 12, 0.4);
+}

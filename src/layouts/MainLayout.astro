@@ -11,7 +11,7 @@ const {
   description = "Kitilab a Digital Solution Agency based in Morocco, Agadir",
 } = Astro.props;
 const title = titleProp + " - Kitilab";
-
+import "../styles/Main.scss";
 import { SEO } from "astro-seo";
 ---
 
@@ -37,66 +37,5 @@ import { SEO } from "astro-seo";
     <main>
       <slot />
     </main>
-    <style lang="scss" is:global>
-      @font-face {
-        font-family: radio-regular;
-        src: url("/fonts/RadioCanada-Regular.ttf");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: radio-light;
-        src: url("/fonts/RadioCanada-Light.ttf");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: radio-medium;
-        src: url("/fonts/RadioCanada-Medium.ttf");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: radio-semi;
-        src: url("/fonts/RadioCanada-SemiBold.ttf");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: radio-bold;
-        src: url("/fonts/RadioCanada-Bold.ttf");
-        font-display: swap;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        font-size: clamp(4px, 0.5vw, 8px);
-        -webkit-tap-highlight-color: transparent;
-      }
-      body {
-        background-color: #140602;
-        color: #fff7ed;
-        line-height: 1.4;
-        font-family: radio-regular, sans-serif;
-        overflow-x: hidden;
-        position: relative;
-      }
-      a,
-      button,
-      li {
-        font-family: inherit;
-        transition: 0.3s;
-      }
-      button:active,
-      a:active {
-        scale: 0.95;
-      }
-
-      @mixin section-layout() {
-        max-width: 160rem;
-        min-width: 95dvw;
-        overflow: hidden;
-        margin: 20rem auto;
-      }
-    </style>
   </body>
 </html>

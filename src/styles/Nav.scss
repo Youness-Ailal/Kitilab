@@ -30,20 +30,24 @@
   list-style: none;
   // gap: 4rem;
   position: relative;
+  justify-content: space-evenly;
+  max-width: 15 * 4rem;
   .line {
     opacity: 0;
     height: 2px;
-    width: 6rem;
+    width: 15rem;
     background-color: #ea580c;
     border-radius: 50rem;
     position: absolute;
     bottom: 0;
-    transition: 0.3s ease, opacity 0.2s ease;
+    transition: 0.3s ease-out, opacity 0.2s ease;
   }
   li {
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-items: center;
+    width: 15rem;
 
     // padding: 0 2.5rem;
   }
@@ -51,12 +55,14 @@
     text-decoration: none;
     color: inherit;
     position: relative;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 0;
     transition: 0.2s;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     svg {
+      height: 3rem;
+      aspect-ratio: 1;
       pointer-events: none;
       rotate: 180deg;
       transition: 0.3s cubic-bezier(0.54, -0.35, 0.39, 0.73);
