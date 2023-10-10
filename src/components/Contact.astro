@@ -1,0 +1,46 @@
+---
+import "../styles/Contact.scss";
+---
+
+<section class="contact">
+  <div class="contact__container">
+    <div class="contact__title">
+      <h1>
+        Ready to Discuss Your Next Big <span>Project</span> With Us?
+      </h1>
+    </div>
+    <form id="contact__form" class="contact__form">
+      <div class="contact__form--top">
+        <span class="contact__form--input-co">
+          <input type="text" class="contact__form__input" id="name" required />
+          <label for="name">Full Name</label>
+          <div class="contact__form--line"></div>
+        </span>
+        <span class="contact__form--input-co">
+          <input type="text" class="contact__form__input" id="email" required />
+          <label for="email">Email</label>
+          <div class="contact__form--line"></div>
+        </span>
+      </div>
+
+      <span class="contact__form--input-co contact__form--input-co--last">
+        <input type="text" class="contact__form__input" id="project" required />
+        <label for="project" class="contact__form--project-label"
+          >About Project</label
+        >
+        <div class="contact__form--line"></div>
+      </span>
+    </form>
+    <div class="contact__bottom">
+      <p>
+        By sending this form I confirm that I have read and accept the <span
+          >Privacy Policy</span
+        >
+      </p>
+      <button type="submit" form="contact__form">
+        <span>send message</span>
+        <span>send message</span>
+      </button>
+    </div>
+  </div>
+</section>

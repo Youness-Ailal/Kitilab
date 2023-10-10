@@ -1,0 +1,109 @@
+---
+import "../styles/Works.scss";
+import workImage1 from "/images/team-working-animation-project.jpg?url";
+import workImage2 from "/images/hero-image.jpg?url";
+import { Icon } from "astro-icon";
+import "swiper/css";
+import "swiper/css/navigation";
+
+import onMount from "astro";
+---
+
+<section class="works">
+  <div class="works__container">
+    <div class="works__top">
+      <h1 class="works__title">OUR<br />WORKS</h1>
+      <div class="works__right">
+        <p class="works__right--desc">
+          We embrace formidable business challenges and boast a proven track
+          record of propelling our partners to greatness
+        </p>
+        <a href="/" class="works__right--button">view<br />more</a>
+      </div>
+    </div>
+
+    <div class="works__slider swiper">
+      <div class="swiper-wrapper works__wrapper">
+        <!-- work 1 -->
+        <figure class="work swiper-slide">
+          <div class="work__left">
+            <p class="work__type">ecommerce</p>
+            <h2 class="work__title">
+              The Premier Brand in E-sports Apparel Design
+            </h2>
+            <p class="work__desc">
+              Halo Lab developed a bespoke 3D builder from the ground up for
+              Raven, empowering them to conquer the e-sports industry with their
+              unique e-commerce solution.
+            </p>
+          </div>
+          <div class="work__right">
+            <img
+              class="work__image"
+              src={workImage1}
+              alt="team working on animation project"
+            />
+          </div>
+        </figure>
+        <!-- work 2 -->
+        <figure class="work swiper-slide">
+          <div class="work__left">
+            <p class="work__type">ecommerce</p>
+            <h2 class="work__title">
+              The Premier Brand in E-sports Apparel Design
+            </h2>
+            <p class="work__desc">
+              Halo Lab developed a bespoke 3D builder from the ground up for
+              Raven, empowering them to conquer the e-sports industry with their
+              unique e-commerce solution.
+            </p>
+          </div>
+          <div class="work__right">
+            <img
+              class="work__image"
+              src={workImage2}
+              alt="team working on animation project"
+            />
+          </div>
+        </figure>
+      </div>
+      <svg class="clippy-svg">
+        <defs>
+          <clipPath id="clippy-image" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.156847 0H0.959759C0.981984 0 1 0.0158203 1 0.0353357V0.964664C1 0.98418 0.981984 1 0.959759 1H0.0402414C0.0180167 1 0 0.98418 0 0.964664V0.143225C0 0.134173 0.00395612 0.125466 0.0110524 0.1189L0.127658 0.0110112C0.135257 0.00398106 0.14581 0 0.156847 0Z"
+              fill="#140602"></path>
+          </clipPath>
+        </defs>
+      </svg>
+      <div class="work__buttons">
+        <button class="work__prev">
+          <Icon class="work__icon work__icon-1" name="ep:arrow-up-bold" />
+          <Icon class="work__icon work__icon-1" name="ep:arrow-up-bold" />
+        </button>
+        <button class="work__next">
+          <Icon class="work__icon work__icon-2" name="ep:arrow-up-bold" />
+          <Icon class="work__icon work__icon-2" name="ep:arrow-up-bold" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="works__circle"></div>
+<script>
+  import Swiper from "swiper";
+
+  const nextButton = document.querySelector(".work__next") as HTMLElement;
+  const prevButton = document.querySelector(".work__prev") as HTMLElement;
+  nextButton.addEventListener("click", () => console.log("nexttt"));
+  const swiper = new Swiper(".works__slider", {
+    loop: true,
+  });
+
+  nextButton.onclick = e => {
+    swiper.slideNext();
+  };
+  prevButton.onclick = e => {
+    swiper.slidePrev();
+  };
+</script>

@@ -1,0 +1,126 @@
+---
+import "../styles/moreAbout.scss";
+import founder1 from "/images/founder1.jpg?url";
+import founder2 from "/images/founder2.jpg?url";
+import founder3 from "/images/founder3.jpg?url";
+import { Icon } from "astro-icon";
+
+import googleIcon from "/googleIcon.svg?raw";
+import doneIcon from "/doneICON.svg?raw";
+import timeIcon from "/timeIcon.svg?raw";
+const alt = "Founder of kitilab";
+---
+
+<section class="about">
+  <div class="about__top">
+    <h2 class="about__top--title">KNOW MORE <span>ABOUT</span> US</h2>
+    <div class="about__founders">
+      <div class="about__founders--images">
+        <img class="about__founders--image" src={founder1} alt={alt} />
+        <img class="about__founders--image" src={founder2} alt={alt} />
+        <img class="about__founders--image" src={founder3} alt={alt} />
+        <p class="about__founders--text">KITILAB FOUNDERS</p>
+      </div>
+    </div>
+  </div>
+  <p class="about__desc">
+    For the past 10 years, ever since our inception in Morocco<Icon
+      class="about__desc--ma"
+      name="emojione:flag-for-morocco"
+    /> , we've dedicated ourselves to refining our Design & Development prowess.
+    Now, we're excited to extend our expertise to ambitious Founders looking to
+    perfect their own skills!
+  </p>
+
+  <div class="figures">
+    <div class="figure">
+      <Fragment class="figure__svg" set:html={googleIcon} />
+      <p class="figure__text">5 Stars Rating on <br /> Google</p>
+      <div class="figure__circle"></div>
+    </div>
+    <div class="figure">
+      <Fragment class="figure__svg" set:html={doneIcon} />
+      <p class="figure__text">
+        +150 Successful
+        <br /> Projects Built
+      </p>
+      <div class="figure__circle"></div>
+    </div>
+
+    <div class="figure">
+      <Fragment class="figure__svg" set:html={timeIcon} />
+      <p class="figure__text">+10 Years of <br /> Experience</p>
+      <div class="figure__circle"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  const circles = document.querySelectorAll(".figure");
+  const figures = document.querySelector(".figures");
+  const viewMoreWorks = document.querySelector(".works__right--button");
+
+  const handeleMouseEnter = function (e) {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect(),
+      x = ((e.clientX - rect.left) * 100) / 238,
+      y = ((e.clientY - rect.top) * 100) / 238;
+
+    target.style.setProperty("--mouse-x", `${x}%`);
+    target.style.setProperty("--mouse-y", `${y}%`);
+  };
+  const handleCircleMove = function (e) {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect();
+    const circleX = (((e.clientX - rect.left) * 100) / 238 - 50) / 4;
+    const circleY = (((e.clientY - rect.top) * 100) / 238 - 50) / 4;
+    target.style.setProperty("--move-x", circleX + "px");
+    target.style.setProperty("--move-y", circleY + "px");
+
+    target.style.setProperty("--move-x-text", circleX / 2 + "px");
+    target.style.setProperty("--move-y-text", circleY / 2 + "px");
+  };
+  const resetePosition = function (e) {
+    const { currentTarget: target } = e;
+
+    target.style.setProperty("--move-x", 0);
+    target.style.setProperty("--move-y", 0);
+  };
+
+  const moveViewMore = function (e) {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect();
+    const circleX = (((e.clientX - rect.left) * 100) / 100 - 50) / 3;
+    const circleY = (((e.clientY - rect.top) * 100) / 100 - 50) / 3;
+
+    target.style.setProperty("--move-x", circleX + "px");
+    target.style.setProperty("--move-y", circleY + "px");
+  };
+
+  for (const circle of document.querySelectorAll(".figure")) {
+    (circle as HTMLElement).onmousemove = e => {
+      handeleMouseEnter(e);
+      handleCircleMove(e);
+    };
+    // circle.addEventListener("mouseenter", () => {
+    //   gsap.to(":root", {
+    //     "--circle-color": "rgb(253, 186, 116, 0.2)",
+    //     duration: 1,
+    //   });
+    // });
+    // circle.addEventListener("mouseleave", e => {
+    //   gsap.to(":root", {
+    //     "--circle-color": "rgb(253, 186, 116, 0)",
+    //     duration: 1,
+    //   });
+    //   resetePosition(e);
+    // });
+    (viewMoreWorks as HTMLElement).onmousemove = e => {
+      moveViewMore(e);
+    };
+    (viewMoreWorks as HTMLElement).onmouseleave = e => {
+      resetePosition(e);
+    };
+  }
+</script>

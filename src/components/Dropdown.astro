@@ -1,0 +1,134 @@
+---
+import "../styles/Dropdown.scss";
+import { Icon } from "astro-icon";
+---
+
+<div data-dropdown-background class="services__container hidden-bg">
+  <div class="services__wrapper">
+    <div data-dropdown-items class="services hidden-drop">
+      <a href="/" class="service">
+        <div class="service__top">
+          <div class="service__icon-1">
+            <Icon name="carbon:idea" />
+          </div>
+          <div class="service__icon-soon">
+            <p>Coming<br />Soon</p>
+          </div>
+        </div>
+        <div class="service__mid">
+          <h1>Innovation<br />Consulting</h1>
+        </div>
+        <div class="service__bottom">
+          <p>
+            Igniting breakthroughs and fostering creativity to drive product
+            excellence and market success
+          </p>
+        </div>
+      </a>
+      <!--  -->
+      <a href="/" class="service">
+        <div class="service__top">
+          <div class="service__icon-1">
+            <Icon name="fluent:window-dev-tools-16-regular" />
+          </div>
+          <div class="service__icon-2">
+            <Icon class="service__icon-2--icon" name="mi:arrow-up" />
+            <Icon class="service__icon-2--icon" name="mi:arrow-up" />
+          </div>
+        </div>
+        <div class="service__mid">
+          <h1>Product<br />Development</h1>
+        </div>
+        <div class="service__bottom">
+          <p>
+            Our upcoming stage entails designing digital experiences that
+            combine visual appeal with exceptional functionality.
+          </p>
+        </div>
+      </a>
+      <!-- Figure 1 -->
+
+      <!-- Figure 2 -->
+      <a href="/" class="service">
+        <div class="service__top">
+          <div class="service__icon-1">
+            <Icon name="fluent:design-ideas-24-regular" />
+          </div>
+          <div class="service__icon-2">
+            <Icon class="service__icon-2--icon" name="mi:arrow-up" />
+            <Icon class="service__icon-2--icon" name="mi:arrow-up" />
+          </div>
+        </div>
+        <div class="service__mid">
+          <h1>Product <br />Design</h1>
+        </div>
+        <div class="service__bottom">
+          <p>
+            In the future, we aim to shape design excellence, harmonizing
+            creativity and precision to produce remarkable results
+          </p>
+        </div>
+      </a>
+      <!-- Figure 3 -->
+      <a href="/" class="service">
+        <div class="service__top">
+          <div class="service__icon-1">
+            <Icon name="fluent:window-dev-tools-16-regular" />
+          </div>
+          <div class="service__icon-2">
+            <Icon class="service__icon-2--icon" name="mi:arrow-up" />
+            <Icon class="service__icon-2--icon" name="mi:arrow-up" />
+          </div>
+        </div>
+        <div class="service__mid">
+          <h1>Promotion<br />Strategy</h1>
+        </div>
+        <div class="service__bottom">
+          <p>
+            Looking ahead, we set out to craft marketing wizardry, fusing
+            creativity and strategy to produce impactful results
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const otherNavLinks = document.querySelectorAll(".out");
+  const navEl = document.querySelector(".services-drop") as HTMLElement;
+  const dropBackground = document.querySelector(".services__container");
+  const dropDown = document.querySelector(".services");
+  const wrapper = document.querySelector(".services__wrapper");
+
+  function showDrop() {
+    dropBackground.classList.remove("hidden-bg");
+    dropDown.classList.remove("hidden-drop");
+  }
+  function hideDrop() {
+    dropBackground.classList.add("hidden-bg");
+    dropDown.classList.add("hidden-drop");
+  }
+
+  navEl.addEventListener("mouseenter", e => {
+    showDrop();
+  });
+  navEl.addEventListener("mouseleave", e => {
+    const target = e.target as Element;
+    if (target.closest(".services__wrapper") || target.closest(".header"))
+      return;
+    hideDrop();
+    console.log("here");
+  });
+  window.addEventListener("mouseover", e => {
+    const target = e.target as Element;
+    if (target.closest(".services__wrapper") || target.closest(".header"))
+      return;
+    hideDrop();
+  });
+  otherNavLinks.forEach(el => {
+    el.addEventListener("mouseenter", e => {
+      hideDrop();
+    });
+  });
+</script>

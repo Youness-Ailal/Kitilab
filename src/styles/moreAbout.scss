@@ -1,0 +1,131 @@
+:root {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+
+  --move-x: 0;
+  --move-y: 0;
+
+  --circle-color: rgb(253, 186, 116, 0);
+}
+
+.about {
+  max-width: 170rem;
+  width: 90dvw;
+  margin: 0 auto;
+  // padding: 10rem;
+  margin-top: 10rem;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &--title {
+      font-size: 5rem;
+      span {
+        color: #f97316;
+      }
+    }
+  }
+
+  &__founders {
+    &--images {
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    &--image {
+      height: 7rem;
+      object-fit: cover;
+      outline: 5px solid #140602;
+      aspect-ratio: 1;
+      border-radius: 10rem;
+
+      &:not(:first-child) {
+        transform: translateX(-1rem);
+      }
+    }
+    &--text {
+      margin-top: 1rem;
+    }
+  }
+  &__desc {
+    color: #fff;
+    margin-top: 5rem;
+    max-width: 60ch;
+    line-height: 2;
+    font-size: 2.6rem;
+    font-family: radio-regular, sans-serif;
+    &--ma {
+      height: 4rem;
+      margin-left: 1rem;
+      translate: 0 1rem;
+    }
+  }
+}
+
+.figures {
+  margin: 10rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.figure {
+  height: 40rem;
+  aspect-ratio: 1;
+  border: 1px solid transparent;
+  border-radius: 50rem;
+  display: flex;
+  gap: 3rem;
+  transform: translate(0, 0);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.2s, scale 0.4s;
+  scale: 1;
+  &:hover {
+    transform: translate(var(--move-x), var(--move-y));
+    scale: 0.96;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50rem;
+    transition: 0.1s ease-in;
+    z-index: 999;
+    border: 1px solid #fff;
+    transition: 0.3s ease-out;
+  }
+  &:hover &__circle {
+    opacity: 1;
+  }
+  &__circle {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(
+      80rem circle at var(--mouse-x) var(--mouse-y),
+      var(--circle-color),
+      transparent 40%
+    );
+    transition: 0.3s;
+    translate: -50% -50%;
+    border-radius: 50rem;
+    transition: 0.3s;
+  }
+  &__text {
+    font-size: 3rem;
+    text-align: center;
+    font-family: radio-regular, sans-serif;
+  }
+}

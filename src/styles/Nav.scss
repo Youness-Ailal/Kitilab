@@ -1,0 +1,146 @@
+.header {
+  min-width: 95dvw;
+  max-width: 150rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  // justify-content: space-between;
+  padding: 2rem;
+  border: 1px solid #fff;
+
+  border-right: none;
+  border-left: none;
+
+  &__logo {
+    svg {
+      width: 24rem;
+      aspect-ratio: 3;
+    }
+  }
+}
+.nav__list {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  padding: rem;
+  font-size: 2.2rem;
+  list-style: none;
+  // gap: 4rem;
+  position: relative;
+  .line {
+    opacity: 0;
+    height: 2px;
+    width: 6rem;
+    background-color: #ea580c;
+    border-radius: 50rem;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s ease, opacity 0.2s ease;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // padding: 0 2.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding: 0.5rem 2.5rem;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    svg {
+      pointer-events: none;
+      rotate: 180deg;
+      transition: 0.3s cubic-bezier(0.54, -0.35, 0.39, 0.73);
+      path {
+        fill: #fff;
+        transition: 0.2s;
+      }
+    }
+    &:hover {
+      color: #f97316;
+    }
+    &:hover {
+      svg {
+        rotate: 0deg;
+        path {
+          fill: #f97316;
+        }
+      }
+    }
+  }
+}
+.cta {
+  padding: 0.8rem 3.2rem;
+  border-radius: 50rem;
+  border: none;
+  background-color: #ea580c;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: bold;
+  justify-self: end;
+  font-family: radio-bold, sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  position: relative;
+  min-width: 26rem;
+  min-height: 5.5rem;
+  transition: 0.3s;
+
+  &:hover &__1 {
+    translate: 60% -4rem !important;
+  }
+  &:hover &__2 {
+    translate: 60% -30% !important;
+  }
+  &__co {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    right: 45%;
+    top: 45%;
+    translate: 50% -50%;
+    overflow: hidden;
+    min-width: 22rem;
+  }
+  span {
+    position: absolute;
+    height: 100%;
+    min-width: 20rem;
+    font-size: 2rem;
+    right: 55%;
+    top: 50%;
+    translate: 60% -30%;
+    transition: 0.3s cubic-bezier(0.54, -0.35, 0.39, 0.73);
+  }
+  &__2 {
+    translate: 60% 4rem !important;
+  }
+}
+
+.pen {
+  translate: 1rem -0.2rem;
+  scale: 0.8;
+  path {
+    stroke: #ea580c;
+  }
+
+  &__logo {
+    svg {
+      scale: 0.5;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

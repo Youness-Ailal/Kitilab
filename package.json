@@ -1,0 +1,28 @@
+{
+  "name": "agency",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/partytown": "^2.0.1",
+    "astro": "^3.2.3",
+    "astro-compress": "^2.0.15",
+    "astro-icon": "^0.8.1",
+    "astro-seo": "^0.8.0",
+    "gsap": "file:public/gsap-bonus.tgz",
+    "gsap-trial": "^3.12.2",
+    "split-text-js": "^1.0.3",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.0"
+  }
+}

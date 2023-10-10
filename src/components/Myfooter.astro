@@ -1,0 +1,64 @@
+---
+import Icon from "astro-icon";
+import "../styles/Footer.scss";
+---
+
+<footer class="footer">
+  <footer class="container">
+    <div class="footer__top">
+      <div class="footer__left">
+        <div class="footer__sub">
+          <p>Stay updated with the latest by subscribing to our newsletter</p>
+          <form>
+            <span>
+              <input type="text" id="email-footer" required />
+              <label for="email-footer">Email Address</label>
+              <button type="submit" name="submit email">
+                <span
+                  ><Icon
+                    class="footer__icon footer__icon--sub"
+                    name="line-md:email"
+                  /></span
+                >
+              </button>
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="footer__mid">
+        <a href="/" class="footer__link">Reviews</a>
+        <a href="/" class="footer__link">Services</a>
+        <a href="/" class="footer__link">Contacts</a>
+        <a href="/" class="footer__link">Home</a>
+      </div>
+      <div class="footer__right">
+        <span class="footer__contact">
+          <p>EMAIL US</p>
+          <span>
+            <Icon class="footer__icon" name="line-md:email" />
+            <div>itsyounessaylal@gmail.com</div>
+          </span>
+        </span>
+        <span class="footer__contact">
+          <p>CALL US</p>
+          <span>
+            <Icon
+              class="footer__icon footer__icon-wp"
+              name="ic:baseline-whatsapp"
+            />
+            <div>+212 123456789</div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>
+        &copy; Made by <span
+          >@<a target="_blank" href="https://www.linkedin.com/in/youness-ailal/"
+            >Youness Ailal</a
+          ></span
+        >
+      </p>
+    </div>
+  </footer>
+</footer>

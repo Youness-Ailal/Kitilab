@@ -1,0 +1,212 @@
+:root {
+  --clippy-contact: polygon(
+    83.74% 0.36%,
+    4.428% 0.36%,
+    4.428% 0.36%,
+    3.727% 0.454%,
+    3.062% 0.726%,
+    2.443% 1.163%,
+    1.877% 1.748%,
+    1.373% 2.467%,
+    0.941% 3.305%,
+    0.59% 4.248%,
+    0.328% 5.28%,
+    0.165% 6.387%,
+    0.108% 7.554%,
+    0.108% 92.446%,
+    0.108% 92.446%,
+    0.165% 93.613%,
+    0.328% 94.72%,
+    0.59% 95.752%,
+    0.941% 96.695%,
+    1.373% 97.533%,
+    1.877% 98.252%,
+    2.443% 98.837%,
+    3.062% 99.274%,
+    3.727% 99.546%,
+    4.428% 99.64%,
+    95.464% 99.64%,
+    95.464% 99.64%,
+    96.165% 99.546%,
+    96.83% 99.274%,
+    97.45% 98.837%,
+    98.016% 98.252%,
+    98.519% 97.533%,
+    98.951% 96.695%,
+    99.302% 95.752%,
+    99.564% 94.72%,
+    99.727% 93.613%,
+    99.784% 92.446%,
+    99.784% 27.081%,
+    99.784% 27.081%,
+    99.77% 26.511%,
+    99.73% 25.948%,
+    99.664% 25.395%,
+    99.572% 24.854%,
+    99.455% 24.328%,
+    99.314% 23.818%,
+    99.149% 23.327%,
+    98.961% 22.858%,
+    98.751% 22.412%,
+    98.519% 21.994%,
+    86.794% 2.467%,
+    86.794% 2.467%,
+    86.543% 2.08%,
+    86.276% 1.73%,
+    85.994% 1.417%,
+    85.699% 1.142%,
+    85.393% 0.907%,
+    85.077% 0.713%,
+    84.752% 0.56%,
+    84.42% 0.449%,
+    84.082% 0.382%,
+    83.74% 0.36%
+  );
+}
+.contact {
+  // max-width: 160rem;
+  min-width: 100dvw;
+  overflow: hidden;
+  margin: 20rem auto;
+  margin-top: 20rem;
+  background: linear-gradient(
+    180deg,
+    #140602 25.15%,
+    #ea580c 76.79%,
+    #f97316 100%
+  );
+  border-radius: 10rem;
+  margin-top: 10rem;
+  padding: 10rem;
+  &__container {
+    margin: 0 auto;
+    max-width: 170rem;
+    aspect-ratio: 2;
+    padding: 5rem 15rem;
+    color: #3c1206;
+    clip-path: var(--clippy-contact);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__title {
+    font-family: radio-bold, sans-serif;
+    font-size: 4rem;
+    line-height: 1.2;
+    max-width: 50ch;
+    text-transform: uppercase;
+    span {
+      color: #ea580c;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 10rem;
+    &--input-co {
+      width: 50%;
+      position: relative;
+      &--last {
+        width: 100%;
+      }
+    }
+    &--line {
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background-color: #ea580c;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transition: 0.3s ease-in;
+    }
+    input {
+      font-size: 2.6rem;
+      color: #3c1206;
+      width: 100%;
+      padding: 2rem;
+      border: none;
+      border-bottom: 2px solid #7b5b5180;
+      position: relative;
+      &:focus {
+        outline: none;
+      }
+      &:focus ~ .contact__form--line,
+      &:valid ~ .contact__form--line {
+        transform: scaleX(1);
+      }
+      &:focus ~ label,
+      &:valid ~ label {
+        top: -4rem;
+        font-size: 2rem;
+      }
+    }
+
+    label {
+      pointer-events: none;
+      font-size: 2.4rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgba(123, 91, 81, 0.8);
+      transition: 0.3s;
+    }
+    &--top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem 0;
+    p {
+      font-size: 2.4rem;
+      font-family: radio-light, sans-serif;
+      max-width: 35ch;
+      span {
+        color: #ea580c;
+      }
+    }
+    button {
+      cursor: pointer;
+      height: 8rem;
+      width: 35rem;
+      background-color: #ea580c;
+      position: relative;
+      border: none;
+      border-radius: 50rem;
+      &:hover span:first-child {
+        translate: -50% -6rem;
+        opacity: 0;
+      }
+      &:hover span:last-child {
+        translate: -50% -50%;
+        opacity: 1;
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        font-size: 2.6rem;
+        color: #fff;
+        transition: 0.2s ease-out;
+        &:last-child {
+          translate: -50% 6rem;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

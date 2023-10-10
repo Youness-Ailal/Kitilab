@@ -1,0 +1,136 @@
+---
+import "../styles/Hero.scss";
+import heroImg from "/images/hero-image2.avif?url";
+---
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__left">
+      <div class="hero__title">
+        <h1 class="hero__title--1">LET'S BUILD<br /> THE NEXT</h1>
+        <div class="hero__title--2">
+          <h1>MAGIC THING</h1>
+        </div>
+      </div>
+      <div class="hero__left--bottom">
+        <div class="hero__exp">
+          <h2 class="hero__exp--years">10Y</h2>
+          <p class="hero__exp--desc">
+            Emphasizing Design <br /> IN Product Development
+          </p>
+        </div>
+        <div class="hero__talk">
+          <a class="talk-href" href="/"
+            ><div class="hero__talk--co">
+              <span class="hero__talk--1">Let's Talk</span><span
+                class="hero__talk--2">Let's Talk</span
+              >
+            </div>
+            <svg
+              class="hero__talk--svg"
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="Speech Bubble">
+                <path
+                  id="Vector"
+                  d="M4.01042 3.2083C2.68824 3.2083 1.60417 4.29237 1.60417 5.61455V18.4479C1.60417 19.7701 2.68824 20.8541 4.01042 20.8541H6.41667V24.758L12.2756 20.8541H20.0521C21.3743 20.8541 22.4583 19.7701 22.4583 18.4479V5.61455C22.4583 4.29237 21.3743 3.2083 20.0521 3.2083H4.01042ZM4.01042 4.81247H20.0521C20.5033 4.81247 20.8542 5.16338 20.8542 5.61455V18.4479C20.8542 18.8991 20.5033 19.25 20.0521 19.25H11.7869L8.02084 21.7627V19.25H4.01042C3.55925 19.25 3.20834 18.8991 3.20834 18.4479V5.61455C3.20834 5.16338 3.55925 4.81247 4.01042 4.81247Z"
+                  fill="#3C1206"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__right">
+      <div class="hero__right--after"></div>
+      <img
+        class="hero__image"
+        src={heroImg}
+        alt="team of developers working on a laptop"
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import SplitText from "Split-text-js";
+  gsap.registerPlugin(SplitText);
+  const container = document.querySelector(".hero__title--2");
+  window.addEventListener("load", () => {
+    container.innerHTML = `
+    <div data-title-words="true" class="hero__title--2-1 words">
+            <span class="word">MAGIC</span>
+            <span class="word">SMART</span>
+            <span class="word">SUPER</span>
+            <span class="word">PRIME</span>
+            <span class="word">GREAT</span>
+          </div>
+          <h1 class="hero__title--2-2">&nbsp;THING</h1>`;
+
+    const targets = [...document.querySelectorAll(".word")];
+    const animation = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+    let widthIndex = 0;
+    let duration = 0.8;
+    let numberOfTargets = targets.length;
+    let pause = 3;
+    let stagger = duration + pause;
+    let repeatDelay = stagger * (numberOfTargets - 1) + pause;
+
+    function init() {
+      gsap.set(".words", { autoAlpha: 1 });
+
+      animation
+        .from(targets, {
+          rotateX: -150,
+          y: 120,
+          duration: duration,
+          opacity: 0,
+          stagger: {
+            each: stagger,
+            repeat: -1,
+            repeatDelay: repeatDelay,
+          },
+          ease: "back.out",
+        })
+        .to(
+          targets,
+          {
+            y: -120,
+            rotateX: 150,
+            duration: duration,
+            opacity: 0,
+            stagger: {
+              each: stagger,
+              repeat: -1,
+              repeatDelay: repeatDelay,
+            },
+          },
+          stagger
+        );
+    }
+
+    init();
+  });
+
+  const gsapImg = gsap.timeline();
+  const heroImgAfter = document.querySelector(".hero__right--after");
+  const heroImage = document.querySelector(".hero__image");
+  gsapImg.to(heroImgAfter, {
+    scaleX: 0,
+    transformOrigin: "right",
+    duration: 1,
+    delay: 0.5,
+  });
+  const aniumateImage = gsapImg.to(
+    heroImage,
+    {
+      scale: 1,
+      duration: 1.5,
+    },
+    "=-1"
+  );
+</script>

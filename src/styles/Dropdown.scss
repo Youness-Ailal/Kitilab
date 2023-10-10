@@ -1,0 +1,226 @@
+:root {
+  --clippy-drop: polygon(
+    77.402% 0.244%,
+    6.481% 0.244%,
+    6.481% 0.244%,
+    5.48% 0.309%,
+    4.53% 0.494%,
+    3.645% 0.79%,
+    2.836% 1.188%,
+    2.117% 1.677%,
+    1.5% 2.247%,
+    0.998% 2.887%,
+    0.623% 3.589%,
+    0.389% 4.341%,
+    0.309% 5.134%,
+    0.309% 94.866%,
+    0.309% 94.866%,
+    0.389% 95.659%,
+    0.623% 96.411%,
+    0.998% 97.113%,
+    1.5% 97.754%,
+    2.117% 98.323%,
+    2.836% 98.812%,
+    3.645% 99.21%,
+    4.53% 99.506%,
+    5.48% 99.692%,
+    6.481% 99.756%,
+    93.519% 99.756%,
+    93.519% 99.756%,
+    94.52% 99.692%,
+    95.47% 99.506%,
+    96.355% 99.21%,
+    97.164% 98.812%,
+    97.883% 98.323%,
+    98.5% 97.754%,
+    99.002% 97.113%,
+    99.377% 96.411%,
+    99.611% 95.659%,
+    99.691% 94.866%,
+    99.691% 17.858%,
+    99.691% 17.858%,
+    99.672% 17.47%,
+    99.614% 17.086%,
+    99.519% 16.71%,
+    99.387% 16.341%,
+    99.219% 15.982%,
+    99.017% 15.635%,
+    98.781% 15.301%,
+    98.511% 14.982%,
+    98.209% 14.679%,
+    97.876% 14.394%,
+    81.76% 1.671%,
+    81.76% 1.671%,
+    81.401% 1.409%,
+    81.019% 1.172%,
+    80.617% 0.96%,
+    80.197% 0.774%,
+    79.76% 0.615%,
+    79.309% 0.484%,
+    78.845% 0.38%,
+    78.372% 0.305%,
+    77.89% 0.26%,
+    77.402% 0.244%
+  );
+}
+a {
+  text-decoration: none;
+}
+.services {
+  background-color: #fff7ed;
+  border-radius: 2rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-height: 60rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  opacity: 1;
+  translate: 0 -5rem;
+  transform: rotateX(0);
+  transition: 0.3s;
+  &__wrapper {
+    perspective: 60rem;
+    margin: 0 auto;
+    width: 95%;
+    max-height: 65rem;
+    transition: 0.3s;
+  }
+  &__container {
+    perspective: 50rem;
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    background-color: rgb(20, 6, 2, 0.5);
+    backdrop-filter: blur(10rem);
+    height: 100dvh;
+    width: 100dvw;
+    padding: 0 5rem;
+    transition: 0.1s;
+  }
+}
+.service {
+  cursor: pointer;
+  padding: 3rem;
+  display: flex;
+  gap: 4rem;
+
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background-color: rgb(255, 237, 213, 0.6);
+  clip-path: var(--clippy-drop);
+  transition: 0.3s;
+  &:hover:not(:first-child) {
+    background-color: #ffedd5;
+  }
+  &:hover &__icon-2 {
+    color: #ffedd5;
+  }
+  &:hover &__icon-2::after {
+    transform: scale(1);
+  }
+  &:hover &__icon-2--icon:first-child {
+    translate: 0 -5rem;
+  }
+  &:hover &__icon-2--icon:last-child {
+    translate: 0 -5rem;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(20, 6, 2, 0.3);
+    padding-bottom: 3rem;
+  }
+  &__icon-1 {
+    height: 7rem;
+    aspect-ratio: 1;
+    color: #fff;
+    background-color: #ea580c;
+    padding: 1rem;
+    border-radius: 10rem;
+    border: 2px solid transparent;
+    opacity: 0.8;
+  }
+
+  &__icon-2 {
+    rotate: 45deg;
+    height: 7rem;
+    aspect-ratio: 1;
+    color: rgb(20, 6, 2, 0.9);
+    background-color: transparent;
+    border: 1px solid rgb(21, 6, 2, 1);
+    padding: 1rem;
+    border-radius: 10rem;
+    opacity: 0.9;
+    position: relative;
+    overflow: hidden;
+    &--icon {
+      transition: 0.3s;
+
+      &:last-child {
+        translate: 0 2rem;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      top: 0;
+      right: 0;
+      border-radius: 10rem;
+      background-color: rgb(20, 6, 2, 1);
+      transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+      z-index: -1;
+      transform: scale(0);
+    }
+  }
+  &__icon-soon {
+    p {
+      font-size: 2rem;
+      font-family: radio-medium, sans-serif;
+      color: rgb(20, 6, 2, 0.5);
+      text-transform: uppercase;
+      margin-left: 2rem;
+    }
+  }
+  &__mid {
+    padding-bottom: 1rem;
+    h1 {
+      color: rgb(20, 6, 2, 0.95);
+      font-size: 4rem;
+      font-weight: bold;
+      font-family: radio-bold, sans-serif;
+      line-height: 1;
+      opacity: 0.9;
+    }
+  }
+  &__bottom {
+    p {
+      color: #433835;
+      font-size: 2rem;
+      max-width: 25ch;
+      font-family: radio-medium, sans-serif;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+  }
+}
+
+.hidden-bg {
+  pointer-events: none;
+  user-select: none;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+}
+.hidden-drop {
+  pointer-events: none;
+  user-select: none;
+
+  opacity: 0;
+  transform: rotateX(-4deg);
+}

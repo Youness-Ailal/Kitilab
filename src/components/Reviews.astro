@@ -1,0 +1,171 @@
+---
+import "../styles/Reviews.scss";
+import Icon from "astro-icon";
+import reviwer1 from "/images/reviewer1.jpg?url";
+import reviwer2 from "/images/reviewer2.jpg?url";
+import reviwer3 from "/images/reviewer3.jpg?url";
+import reviwer4 from "/images/reviewer4.jpg?url";
+import reviwer5 from "/images/reviewer5.jpg?url";
+import reviwer6 from "/images/reviewer6.jpg?url";
+import reviwer7 from "/images/reviewer7.jpg?url";
+const alt = "a young beautifu person smiling";
+---
+
+<section class="reviews">
+  <div class="reviews__container">
+    <div class="reviews__top">
+      <p class="reviews__paragraph">
+        Our track record speaks for itself. We've assisted countless partners,
+        spanning from fledgling startups to thriving medium-sized enterprises,
+        in reaching their objectives.
+      </p>
+      <div class="reviews__google">
+        <Icon name="flat-color-icons:google" class="reviews__google--icon" />
+        <p class="reviews__google--text">40+ Reviews</p>
+      </div>
+    </div>
+    <div class="reviews__mid">
+      <div class="reviews__title">
+        <h1>Reviews From Our Customers</h1>
+        <sapn class="reviews__title--icon-co">
+          <Icon name="entypo:quote" class="reviews__title--icon" />
+        </sapn>
+      </div>
+
+      <div class="reviews__buttons">
+        <button class="reviews__prev">
+          <Icon class="reviews__icon reviews__icon-1" name="ep:arrow-up-bold" />
+          <Icon class="reviews__icon reviews__icon-1" name="ep:arrow-up-bold" />
+        </button>
+        <button class="reviews__next">
+          <Icon class="reviews__icon reviews__icon-2" name="ep:arrow-up-bold" />
+          <Icon class="reviews__icon reviews__icon-2" name="ep:arrow-up-bold" />
+        </button>
+      </div>
+    </div>
+    <div class="reviews-list reviews__slider swiper">
+      <div class="swiper-wrapper reviews__wrapper">
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "Fantastic results! They boosted our online presence and traffic.
+            Highly recommended!"
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer1} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Hamza Tamer</p>
+              <span>Co-Founder at Halateem</span>
+            </div>
+          </div>
+        </figure>
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "Communication with your team is effortless, and your ability to
+            stay ahead of market trends has been invaluable to our success."
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer7} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Sophie Patel</p>
+              <span>Product Manager, InnovateTech</span>
+            </div>
+          </div>
+        </figure>
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "We value your agency as a true partner, consistently turning ideas
+            into digital brilliance and delivering high-quality solutions."
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer3} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Karim Ali</p>
+              <span>Lead Designer, PixelCraft</span>
+            </div>
+          </div>
+        </figure>
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "Your professionalism sets a high industry standard, and your
+            strategic solutions have played a vital role in our ongoing
+            success."
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer4} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Oliver Smith</p>
+              <span>Marketing Director, TechPulse</span>
+            </div>
+          </div>
+        </figure>
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "Efficient communication, forward-thinking strategies, and
+            captivating designs make your agency a key player in our success
+            story."
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer5} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Daniel Kim</p>
+              <span>Project Manager, TechNest</span>
+            </div>
+          </div>
+        </figure>
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "Your team's unwavering commitment to excellence and high-quality
+            work sets a standard we greatly appreciate."
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer6} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Sarah Brown</p>
+              <span>Sales Director, SalesPro</span>
+            </div>
+          </div>
+        </figure>
+        <!-- Reviw -->
+        <figure class="review swiper-slide">
+          <p class="review__text">
+            "Your professionalism is exemplary, and your strategic solutions
+            have proven to be essential in our journey to success."
+          </p>
+          <div class="review__bottom">
+            <img src={reviwer2} alt={alt} />
+            <div class="reviws__bottom--info">
+              <p>Ahmed Mansour</p>
+              <span>Lead Developer, ByteCraft</span>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+
+  const nextButton = document.querySelector(".reviews__next") as HTMLElement;
+  const prevButton = document.querySelector(".reviews__prev") as HTMLElement;
+  const swiper = new Swiper(".reviews__slider", {
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 50,
+    grabCursor: true,
+  });
+
+  nextButton.onclick = e => {
+    swiper.slideNext();
+  };
+  prevButton.onclick = e => {
+    swiper.slidePrev();
+  };
+</script>

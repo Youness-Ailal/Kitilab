@@ -1,0 +1,301 @@
+:root {
+  --clipy: polygon(
+    81.771% 0%,
+    6.601% 0%,
+    6.601% 0%,
+    5.53% 0.083%,
+    4.514% 0.325%,
+    3.567% 0.711%,
+    2.702% 1.229%,
+    1.933% 1.866%,
+    1.274% 2.608%,
+    0.737% 3.442%,
+    0.337% 4.356%,
+    0.086% 5.336%,
+    0% 6.369%,
+    0% 93.631%,
+    0% 93.631%,
+    0.086% 94.664%,
+    0.337% 95.644%,
+    0.737% 96.558%,
+    1.274% 97.392%,
+    1.933% 98.134%,
+    2.702% 98.771%,
+    3.567% 99.289%,
+    4.514% 99.675%,
+    5.53% 99.917%,
+    6.601% 100%,
+    93.399% 100%,
+    93.399% 100%,
+    94.47% 99.917%,
+    95.486% 99.675%,
+    96.433% 99.289%,
+    97.298% 98.771%,
+    98.067% 98.134%,
+    98.726% 97.392%,
+    99.263% 96.558%,
+    99.664% 95.644%,
+    99.914% 94.664%,
+    100% 93.631%,
+    100% 18.01%,
+    100% 18.01%,
+    99.98% 17.517%,
+    99.922% 17.031%,
+    99.825% 16.552%,
+    99.691% 16.083%,
+    99.52% 15.626%,
+    99.314% 15.183%,
+    99.074% 14.756%,
+    98.799% 14.347%,
+    98.491% 13.957%,
+    98.151% 13.589%,
+    86.523% 1.949%,
+    86.523% 1.949%,
+    86.136% 1.592%,
+    85.723% 1.268%,
+    85.287% 0.979%,
+    84.829% 0.725%,
+    84.353% 0.507%,
+    83.86% 0.327%,
+    83.353% 0.186%,
+    82.834% 0.083%,
+    82.306% 0.021%,
+    81.771% 0%
+  );
+  --clippy-hero: polygon(
+    66.377% 8.976%,
+    4.294% 8.976%,
+    4.294% 8.976%,
+    3.631% 9.075%,
+    3.002% 9.361%,
+    2.415% 9.819%,
+    1.879% 10.432%,
+    1.402% 11.187%,
+    0.994% 12.066%,
+    0.661% 13.055%,
+    0.413% 14.138%,
+    0.258% 15.299%,
+    0.204% 16.523%,
+    0.204% 92.075%,
+    0.204% 92.075%,
+    0.258% 93.3%,
+    0.413% 94.461%,
+    0.661% 95.544%,
+    0.994% 96.533%,
+    1.402% 97.412%,
+    1.879% 98.167%,
+    2.415% 98.78%,
+    3.002% 99.238%,
+    3.631% 99.524%,
+    4.294% 99.623%,
+    95.706% 99.623%,
+    95.706% 99.623%,
+    96.369% 99.524%,
+    96.998% 99.238%,
+    97.585% 98.78%,
+    98.121% 98.167%,
+    98.598% 97.412%,
+    99.006% 96.533%,
+    99.339% 95.544%,
+    99.587% 94.461%,
+    99.742% 93.3%,
+    99.796% 92.075%,
+    99.796% 7.925%,
+    99.796% 7.925%,
+    99.742% 6.7%,
+    99.587% 5.539%,
+    99.339% 4.456%,
+    99.006% 3.467%,
+    98.598% 2.588%,
+    98.121% 1.834%,
+    97.585% 1.22%,
+    96.998% 0.762%,
+    96.369% 0.476%,
+    95.706% 0.377%,
+    76.567% 0.377%,
+    76.567% 0.377%,
+    76.35% 0.388%,
+    76.135% 0.42%,
+    75.92% 0.472%,
+    75.708% 0.546%,
+    75.499% 0.64%,
+    75.292% 0.754%,
+    75.089% 0.888%,
+    74.89% 1.042%,
+    74.694% 1.215%,
+    74.504% 1.408%,
+    68.441% 7.945%,
+    68.441% 7.945%,
+    68.25% 8.138%,
+    68.055% 8.312%,
+    67.856% 8.466%,
+    67.653% 8.6%,
+    67.446% 8.714%,
+    67.237% 8.808%,
+    67.024% 8.881%,
+    66.81% 8.934%,
+    66.594% 8.966%,
+    66.377% 8.976%
+  );
+}
+.hero {
+  max-width: 160rem;
+  min-width: 100dvw;
+  // max-width: 100dvw;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 5rem;
+  // background-color: teal;
+  padding: 2rem;
+  &__container {
+    margin: 0 auto;
+    min-height: 80rem;
+    max-height: 90rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    // gap: 4rem;
+    grid-template-columns: 1.8fr 1fr;
+  }
+  &__left {
+    background: linear-gradient(180deg, #ea580c 25.08%, #f97316 100%);
+    width: 60dvw;
+    min-height: 70rem;
+    clip-path: var(--clippy-hero);
+    padding: 10rem;
+    max-height: 80rem;
+    &--bottom {
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      justify-content: space-between;
+    }
+  }
+  &__exp {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: radio-semi, sans-serif;
+    &--years {
+      font-size: 8rem;
+    }
+    &--desc {
+      font-size: 2.2rem;
+    }
+  }
+  &__talk {
+    min-width: 22rem;
+    svg {
+      // translate: -0.5rem 0rem;
+    }
+    a {
+      text-decoration: none;
+      color: #3c1206;
+      font-family: radio-medium, sans-serif;
+      background-color: #facc15;
+      padding: 1.5rem;
+      border-radius: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    &--co {
+      position: relative;
+      min-width: 18rem;
+      height: 3rem;
+      overflow: hidden;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        font-size: 2.6rem;
+        width: 100%;
+        text-align: center;
+        transition: 300ms cubic-bezier(0.54, -0.35, 0.39, 0.73);
+      }
+    }
+
+    &--2 {
+      translate: -50% 3rem !important;
+    }
+    &:hover &--1 {
+      translate: -50% -5rem !important;
+    }
+    &:hover &--2 {
+      translate: -50% -50% !important;
+    }
+  }
+  &__title {
+    color: #fff;
+    font-size: 9rem;
+    line-height: 1;
+    font-family: radio-bold, sans-serif;
+    border-bottom: 2px solid #fed7aa;
+    padding-bottom: 5rem;
+
+    &--2 {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &-2 {
+        transition: 0.1s;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__right {
+    background-size: cover;
+    overflow: hidden;
+    width: 65rem;
+    min-height: 70rem;
+    height: 100%;
+    clip-path: var(--clipy);
+    position: relative;
+    // background-image: url("../../public/images/hero-image2.avif");
+    // background-position: right;
+    &--after {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 99;
+      background-color: #140602;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.words {
+  perspective: 80rem;
+  visibility: hidden;
+  height: 13rem;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+  z-index: 99;
+  width: 48rem;
+  align-self: stretch;
+}
+.word {
+  font-size: 14rem;
+  font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  left: 0%;
+  top: 50%;
+  translate: 0% -50%;
+  white-space: nowrap;
+}
