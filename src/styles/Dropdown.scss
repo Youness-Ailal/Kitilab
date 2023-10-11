@@ -93,6 +93,9 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+  @media (width<=700px) {
+    display: none;
+  }
 
   &__wrapper {
     perspective: 60rem;
@@ -100,6 +103,9 @@ a {
     width: 95%;
     max-height: 65rem;
     transition: 0.3s;
+    @media (width<=700px) {
+      display: none;
+    }
   }
   &__container {
     perspective: 50rem;
@@ -116,6 +122,9 @@ a {
       padding: 0 0.5rem;
     }
     @media (width<=1100px) {
+    }
+    @media (width<=700px) {
+      display: none;
     }
   }
 }
