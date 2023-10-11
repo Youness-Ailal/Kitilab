@@ -214,6 +214,7 @@
   z-index: 99;
   display: grid;
   place-content: center;
+  pointer-events: none;
   ul {
     list-style: none;
     display: flex;
@@ -255,5 +256,5 @@
 
 .display {
   display: block !important;
-  pointer-events: visible;
+  pointer-events: visible !important;
 }

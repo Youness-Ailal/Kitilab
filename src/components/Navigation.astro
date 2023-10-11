@@ -135,7 +135,7 @@ import Dropdown from "./Dropdown.astro";
     );
   };
   const hideNav = function () {
-    navLinks.forEach(nav => nav.classList.add("display"));
+    navLinks.forEach(nav => nav.classList.remove("display"));
 
     gsap.fromTo(
       ".mobNav--links",
