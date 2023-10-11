@@ -4,6 +4,7 @@
   overflow: hidden;
   margin: 20rem auto;
   margin-top: 20rem;
+
   &__container {
     padding: 4rem;
   }
@@ -15,6 +16,15 @@
     justify-content: center;
     justify-items: center;
     gap: 8rem;
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr 1fr 1.5fr;
+    }
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
+      align-items: start;
+      justify-items: start;
+      padding: 5rem;
+    }
   }
   &__left,
   &__mid,
@@ -23,6 +33,9 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
+    @media (max-width: 750px) {
+      align-items: start;
+    }
   }
   &__icon {
     height: 5rem;

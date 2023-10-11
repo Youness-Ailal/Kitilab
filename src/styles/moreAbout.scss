@@ -20,9 +20,13 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 5rem;
 
     &--title {
       font-size: 5rem;
+      @media (max-width: 700px) {
+        font-size: 4rem;
+      }
       span {
         color: #f97316;
       }
@@ -87,6 +91,9 @@
   position: relative;
   transition: 0.2s, scale 0.4s;
   scale: 1;
+  @media (max-width: 700px) {
+    height: 35rem;
+  }
   &:hover {
     transform: translate(var(--move-x), var(--move-y));
     scale: 0.96;
@@ -128,5 +135,8 @@
     font-size: 3rem;
     text-align: center;
     font-family: radio-regular, sans-serif;
+    @media (max-width: 700px) {
+      font-size: 2.5rem;
+    }
   }
 }

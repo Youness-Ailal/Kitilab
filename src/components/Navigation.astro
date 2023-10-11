@@ -30,9 +30,27 @@ import Dropdown from "./Dropdown.astro";
       </li>
       <li><a href="/" text-data="PROJECTS" class="out">PROJECTS</a></li>
       <li><a href="/" text-data="BLOG" class="out">BLOG</a></li>
-      <div class="line"></div>
+      <li class="line"></li>
     </ul>
   </nav>
+  <!-- Mobile nav -->
+  <nav class="mobNav">
+    <ul class="mobNav__list hidden">
+      <li><a class="mobNav--links" href="/" class="out">HOME</a></li>
+      <li>
+        <a class="mobNav--links" href="/" class="out">DEVELOPMENT</a>
+      </li>
+      <li><a class="mobNav--links" href="/" class="out">DESIGN</a></li>
+      <li><a class="mobNav--links" href="/" class="out">MARKETING</a></li>
+      <li><a class="mobNav--links" href="/" class="out">PROJECTS</a></li>
+      <li><a class="mobNav--links" href="/" class="out">REVIEWS</a></li>
+      <li class="mobNav__line mobNav__line--1"></li>
+      <li class="mobNav__line mobNav__line--2"></li>
+      <li class="mobNav__line mobNav__line--3"></li>
+      <li class="mobNav__line mobNav__line--4"></li>
+    </ul>
+  </nav>
+  <!--  -->
   <a href="/" class="cta out">
     <div class="cta__co">
       <span class="cta__1">GET IN TOUCH</span><span class="cta__2"
@@ -40,13 +58,26 @@ import Dropdown from "./Dropdown.astro";
       >
     </div>
   </a>
+  <label class="hamburger nav__menu-button">
+    <input type="checkbox" class="nav__menu-checkbox" />
+    <svg viewBox="0 0 32 32">
+      <path
+        class="line line-top-bottom"
+        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+      ></path>
+      <path class="line" d="M7 16 27 16"></path>
+    </svg>
+  </label>
 </header>
 <Dropdown />
 <script>
+  import gsap from "gsap";
   const line = document.querySelector(".line") as HTMLElement;
   const navElemnts = document.querySelectorAll("li");
   const nav = document.querySelector("nav");
-
+  const navCheckbox = document.querySelector(".nav__menu-checkbox");
+  const mobNav = document.querySelector(".mobNav__list");
+  const navLinks = document.querySelectorAll(".mobNav--links");
   function move(x: string, width?: string) {
     line.style.opacity = "1";
     line.style.left = x;
@@ -75,6 +106,68 @@ import Dropdown from "./Dropdown.astro";
   });
   nav.addEventListener("mouseleave", () => {
     line.style.opacity = "0";
+  });
+
+  const showNav = function () {
+    navLinks.forEach(nav => nav.classList.add("display"));
+    gsap.to(".mobNav__line", {
+      width: "100%",
+      transformOrigin: "left",
+      duration: 0.3,
+      stagger: 0.15,
+    });
+    gsap.fromTo(
+      ".mobNav--links",
+      {
+        translateY: 50,
+        duration: 0.1,
+        stagger: 0.2,
+        opacity: 0,
+      },
+      {
+        duration: 0.1,
+        delay: 0.4,
+        stagger: 0.15,
+        opacity: 1,
+        translateY: 0,
+        ease: "power1.out",
+      }
+    );
+  };
+  const hideNav = function () {
+    navLinks.forEach(nav => nav.classList.add("display"));
+
+    gsap.fromTo(
+      ".mobNav--links",
+      {
+        translateY: 0,
+        duration: 0.1,
+        stagger: 0.15,
+      },
+      {
+        duration: 0.05,
+        stagger: 0.01,
+        opacity: 0,
+        translateY: 50,
+        ease: "power1.out",
+      }
+    );
+    gsap.to(".mobNav__line", {
+      width: 0,
+      transformOrigin: "left",
+      delay: 0.4,
+      duration: 0.2,
+      stagger: 0.1,
+    });
+  };
+  navCheckbox.addEventListener("change", e => {
+    const checked = (e.target as HTMLInputElement).checked;
+    if (checked) {
+      showNav();
+    } else {
+      hideNav();
+    }
+    console.log(checked);
   });
 </script>
 

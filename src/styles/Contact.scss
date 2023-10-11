@@ -78,6 +78,15 @@
   border-radius: 10rem;
   margin-top: 10rem;
   padding: 10rem;
+
+  @media (max-width: 800px) {
+    margin-top: 5rem;
+    padding: 5rem;
+  }
+  @media (max-width: 500px) {
+    padding: 1rem;
+    border-radius: 2rem;
+  }
   &__container {
     margin: 0 auto;
     max-width: 170rem;
@@ -89,6 +98,11 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    @media (max-width: 800px) {
+      clip-path: none;
+      border-radius: 5rem;
+      padding: 5rem;
+    }
   }
 
   &__title {
@@ -97,6 +111,9 @@
     line-height: 1.2;
     max-width: 50ch;
     text-transform: uppercase;
+    @media (max-width: 800px) {
+      font-size: 3rem;
+    }
     span {
       color: #ea580c;
     }
@@ -111,6 +128,9 @@
     &--input-co {
       width: 50%;
       position: relative;
+      @media (max-width: 500px) {
+        width: 100%;
+      }
       &--last {
         width: 100%;
       }
@@ -164,6 +184,9 @@
       justify-content: center;
       gap: 4rem;
       margin-bottom: 8rem;
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -172,6 +195,12 @@
     align-items: center;
     justify-content: space-between;
     margin: 5rem 0;
+    @media (max-width: 680px) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 5rem;
+      justify-content: stretch;
+    }
     p {
       font-size: 2.4rem;
       font-family: radio-light, sans-serif;
@@ -181,6 +210,9 @@
       }
     }
     button {
+      @media (max-width: 680px) {
+        align-self: end;
+      }
       cursor: pointer;
       height: 8rem;
       width: 35rem;

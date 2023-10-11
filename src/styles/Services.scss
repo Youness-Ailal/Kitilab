@@ -13,12 +13,21 @@
     color: #3c1206;
     max-width: 100%;
     margin: 0 auto;
+    @media (max-width: 900px) {
+      padding: 4rem;
+      height: auto;
+      clip-path: none;
+      border-radius: 5rem;
+    }
   }
   &__title {
     font-family: radio-bold, sans-serif;
     font-weight: 700;
     line-height: 1;
     font-size: 12rem;
+    @media (max-width: 900px) {
+      font-size: 10rem;
+    }
   }
   &__list {
     margin-top: 10rem;
@@ -41,6 +50,12 @@
   gap: 5rem;
   background-color: rgb(255, 237, 213, 0.7);
   transition: 0.3s;
+
+  @media (max-width: 900px) {
+    padding: 2rem;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr;
+  }
   &:hover {
     background-color: #ffedd5;
   }
@@ -109,6 +124,10 @@
     }
   }
   &__left {
+    @media (max-width: 900px) {
+      grid-column: 1;
+      grid-row: 1;
+    }
     &--icon {
       height: 8rem;
       aspect-ratio: 1;
@@ -152,6 +171,10 @@
   &__mid {
     font-size: 2.6rem;
     color: #7b5b51;
+    @media (max-width: 900px) {
+      grid-column: 1/-1;
+      grid-row: 2;
+    }
   }
   &__right {
     justify-self: end;
