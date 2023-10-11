@@ -119,21 +119,20 @@ import heroImg from "/images/hero-image2.avif?url";
   const gsapImg = gsap.timeline();
   const heroImgAfter = document.querySelector(".hero__right--after");
   const heroImage = document.querySelector(".hero__image");
-  if (+window.innerWidth >= 700) {
-    gsapImg.to(heroImgAfter, {
-      scaleX: 0,
-      transformOrigin: "right",
-      duration: 1,
-    });
-    const aniumateImage = gsapImg.to(
-      heroImage,
-      {
-        scale: 1,
-        duration: 1.5,
-      },
-      "=-1"
-    );
-  }
+  gsapImg.to(heroImgAfter, {
+    scaleX: 0,
+    transformOrigin: "right",
+    duration: 1,
+  });
+  const aniumateImage = gsapImg.to(
+    heroImage,
+    {
+      scale: 1,
+      duration: 1.5,
+    },
+    "=-1"
+  );
+
   const root = document.documentElement;
   let timeout;
   window.addEventListener("scroll", () => {
