@@ -32,7 +32,7 @@
   position: relative;
   justify-content: space-evenly;
   max-width: 15 * 4rem;
-  @media (width<=700px) {
+  @media (max-width: 700px) {
     display: none;
   }
   .line {

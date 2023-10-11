@@ -84,16 +84,16 @@ a {
   transform: rotateX(0);
   transition: 0.3s;
 
-  @media (width<=1300px) {
+  @media (max-width: 1300px) {
     width: 100%;
     padding: 2rem;
   }
-  @media (width<=1100px) {
+  @media (max-width: 1100px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  @media (width<=700px) {
+  @media (max-width: 700px) {
     display: none;
   }
 
@@ -103,7 +103,7 @@ a {
     width: 95%;
     max-height: 65rem;
     transition: 0.3s;
-    @media (width<=700px) {
+    @media (max-width: 700px) {
       display: none;
     }
   }
@@ -118,12 +118,12 @@ a {
     width: 100dvw;
     padding: 0 5rem;
     transition: 0.1s;
-    @media (width<=1300px) {
+    @media (max-width: 1300px) {
       padding: 0 0.5rem;
     }
-    @media (width<=1100px) {
+    @media (max-width: 1100px) {
     }
-    @media (width<=700px) {
+    @media (max-width: 700px) {
       display: none;
     }
   }
@@ -161,7 +161,7 @@ a {
     align-items: center;
     border-bottom: 2px solid rgb(20, 6, 2, 0.3);
     padding-bottom: 3rem;
-    @media (width<=1100px) {
+    @media (max-width: 1100px) {
       padding-bottom: 0;
       align-self: center;
       border-bottom: none;
@@ -223,7 +223,7 @@ a {
   }
   &__mid {
     padding-bottom: 1rem;
-    @media (width<=1100px) {
+    @media (max-width: 1100px) {
       border-top: 2px solid rgb(20, 6, 2, 0.3);
       padding-top: 4rem;
     }
@@ -253,7 +253,7 @@ a {
   user-select: none;
   background-color: transparent;
   backdrop-filter: blur(0);
-  @media (width<=700px) {
+  @media (max-width: 700px) {
     display: none;
   }
 }
@@ -263,7 +263,7 @@ a {
 
   opacity: 0;
   transform: rotateX(-4deg);
-  @media (width<=700px) {
+  @media (max-width: 700px) {
     display: none;
   }
 }
