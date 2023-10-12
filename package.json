@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.0.1",
+    "@studio-freight/lenis": "^1.0.27",
     "astro": "^3.2.3",
     "astro-compress": "^2.0.15",
     "astro-icon": "^0.8.1",

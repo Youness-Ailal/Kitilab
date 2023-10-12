@@ -11,10 +11,10 @@ import Myfooter from "../components/Myfooter.astro";
 
 <MainLayout titleProp="Home" />
 
-<Hero />
+<Hero client:visible />
 <MoreAboutUs />
-<Works />
-<Reviews />
-<Services />
-<Contact />
-<Myfooter />
+<Works client:visible />
+<Reviews client:visible />
+<Services client:visible />
+<Contact client:visible />
+<Myfooter client:visible />

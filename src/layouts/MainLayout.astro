@@ -37,5 +37,20 @@ import { SEO } from "astro-seo";
     <main>
       <slot />
     </main>
+    <script>
+      import Lenis from "@studio-freight/lenis";
+      const lenis = new Lenis({
+        duration: 1.8,
+      });
+
+      lenis.on("scroll", e => {});
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
   </body>
 </html>
