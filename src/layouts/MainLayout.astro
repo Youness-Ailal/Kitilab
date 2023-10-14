@@ -1,5 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import Myfooter from "../components/Myfooter.astro";
+
 interface Props {
   titleProp: string;
   description?: string;
@@ -37,6 +39,7 @@ import { SEO } from "astro-seo";
     <main>
       <slot />
     </main>
+    <Myfooter />
     <script>
       import Lenis from "@studio-freight/lenis";
       const lenis = new Lenis({

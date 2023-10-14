@@ -5,16 +5,14 @@ import MoreAboutUs from "../components/MoreAboutUs.astro";
 import Works from "../components/Works.astro";
 import Reviews from "../components/Reviews.astro";
 import Services from "../components/Services.astro";
-import Contact from "../components/Contact.astro";
-import Myfooter from "../components/Myfooter.astro";
+import Contact from "../components/ContactSection.astro";
 ---
 
-<MainLayout titleProp="Home" />
-
-<Hero client:visible />
-<MoreAboutUs />
-<Works client:visible />
-<Reviews client:visible />
-<Services client:visible />
-<Contact client:visible />
-<Myfooter client:visible />
+<MainLayout titleProp="Home">
+  <Hero />
+  <MoreAboutUs />
+  <Works />
+  <Reviews />
+  <Services />
+  <Contact />
+</MainLayout>

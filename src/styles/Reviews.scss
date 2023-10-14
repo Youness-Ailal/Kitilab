@@ -242,6 +242,7 @@
     rotate: 180deg;
   }
   &__wrapper {
+    display: flex !important;
   }
 }
 .reviews-list {
@@ -259,6 +260,7 @@
   // padding-right: 10rem;
   background: linear-gradient(180deg, #ea580c 1.88%, #f97316 101.88%);
   clip-path: var(--clippy-review);
+  min-width: 65rem;
   width: 65rem;
 
   display: flex;

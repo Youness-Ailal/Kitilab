@@ -95,6 +95,7 @@ import { Icon } from "astro-icon";
 </div>
 
 <script>
+  
   const otherNavLinks = document.querySelectorAll(".out");
   const navEl = document.querySelector(".services-drop") as HTMLElement;
   const dropBackground = document.querySelector(".services__container");
@@ -118,7 +119,6 @@ import { Icon } from "astro-icon";
     if (target.closest(".services__wrapper") || target.closest(".header"))
       return;
     hideDrop();
-    console.log("here");
   });
   window.addEventListener("mouseover", e => {
     const target = e.target as Element;
@@ -130,5 +130,14 @@ import { Icon } from "astro-icon";
     el.addEventListener("mouseenter", e => {
       hideDrop();
     });
+  });
+  navEl.addEventListener("click", e => {
+    e.preventDefault();
+    if (navEl.getAttribute("is-expanded") === "true") {
+      hideDrop();
+    }
+    if (navEl.getAttribute("is-expanded") === "false") {
+      showDrop();
+    }
   });
 </script>

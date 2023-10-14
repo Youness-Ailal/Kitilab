@@ -20,7 +20,7 @@ import heroImg from "/images/hero-image2.avif?url";
           </p>
         </div>
         <div class="hero__talk">
-          <a class="talk-href" href="/"
+          <a class="talk-href" href="/Contact"
             ><div class="hero__talk--co">
               <span class="hero__talk--1">Let's Talk</span><span
                 class="hero__talk--2">Let's Talk</span
@@ -57,8 +57,7 @@ import heroImg from "/images/hero-image2.avif?url";
 
 <script>
   import gsap from "gsap";
-  // import Scrollbar from "smooth-scrollbar";
-  // Scrollbar.init(document.querySelector("#kitilab"));
+  
   const container = document.querySelector(".hero__title--2");
   window.addEventListener("load", () => {
     container.innerHTML = `
@@ -136,7 +135,6 @@ import heroImg from "/images/hero-image2.avif?url";
   const root = document.documentElement;
   let timeout;
   window.addEventListener("scroll", () => {
-    // root.style.setProperty("--scroll-color", "#ea580c");
     gsap.to(":root", {
       "--scroll-color": "#ea580c",
       duration: 0.5,
@@ -149,7 +147,6 @@ import heroImg from "/images/hero-image2.avif?url";
         "--scroll-color": "rgb(234, 88, 12, 0.4)",
         duration: 0.5,
       });
-      // root.style.setProperty("--scroll-color", "rgb(234, 88, 12, 0.5)");
     }, 500);
   });
 </script>

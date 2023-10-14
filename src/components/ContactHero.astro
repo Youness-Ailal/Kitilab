@@ -1,0 +1,74 @@
+---
+import "../styles/Contact.scss";
+import "../styles/ContactHero.scss";
+import Icon from "astro-icon";
+---
+
+<div class="message__circle"></div>
+<section class="message">
+  <div class="message__container">
+    <div class="message__left">
+      <h2>LET'S</h2>
+      <h2 class="message__left--colored">BUILD</h2>
+      <h2>AND</h2>
+      <h2 class="message__left--colored">SCALE</h2>
+      <h2>IT</h2>
+    </div>
+
+    <div class="message__right">
+      <form id="contact__form" class="contact__form">
+        <div class="contact__form--top">
+          <span class="contact__form--input-co">
+            <input
+              type="text"
+              class="contact__form__input"
+              id="name"
+              required
+            />
+            <label for="name">Full Name</label>
+            <div class="contact__form--line"></div>
+          </span>
+          <span class="contact__form--input-co">
+            <input
+              type="text"
+              class="contact__form__input"
+              id="email"
+              required
+            />
+            <label for="email">Email</label>
+            <div class="contact__form--line"></div>
+          </span>
+        </div>
+
+        <span class="contact__form--input-co contact__form--input-co--last">
+          <textarea
+            class="contact__form__input message__about-project"
+            id="project"
+            required></textarea>
+          <label for="project" class="contact__form--project-label"
+            >About Project</label
+          >
+          <div class="contact__form--line message__form--line-last"></div>
+        </span>
+      </form>
+      <div class="contact__bottom message__form--bottom">
+        <p>
+          By sending this form I confirm that I have read and accept the <span
+            >Privacy Policy</span
+          >
+        </p>
+        <button type="submit" form="contact__form">
+          <span>send message</span>
+          <span>send message</span>
+          <!-- <Icon class="message__form--icon" name="bi:send" /> -->
+        </button>
+      </div>
+    </div>
+    <div class="message__respond">
+      <span>
+        <Icon class="message__respond--icon" name="ri:check-fill" />
+      </span>
+      <p>we will response within 24 hours</p>
+    </div>
+  </div>
+</section>
