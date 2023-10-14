@@ -171,6 +171,7 @@
 
     @media (max-width: 950px) {
       grid-template-columns: 1fr;
+
       max-height: 150rem;
     }
   }
@@ -207,6 +208,7 @@
       justify-content: start;
       padding-left: 0;
       font-size: 5rem;
+      grid-row: 1/2;
     }
     @media (max-width: 620px) {
       font-size: 4rem;
@@ -225,6 +227,9 @@
     @media (max-width: 700px) {
       margin-right: 0;
       clip-path: var(--clyppy-contactmob);
+    }
+    @media (max-width: 950px) {
+      grid-row: 2/3;
     }
   }
   &__about-project {
@@ -247,6 +252,10 @@
     gap: 1rem;
     color: #fff;
     grid-column: 2;
+    @media (max-width: 950px) {
+      grid-row: 3/4;
+      grid-column: 1;
+    }
     span {
       background-color: #ea580c;
       height: 4rem;
