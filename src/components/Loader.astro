@@ -1,0 +1,95 @@
+---
+import "../styles/loader.scss";
+---
+
+<div class="loader">
+  <div class="loader__line loader__line--1"></div>
+  <div class="loader__line loader__line--2"></div>
+  <div class="loader__line loader__line--3"></div>
+  <div class="loader__line loader__line--4"></div>
+  <div class="box-of-star1">
+    <div class="fire">
+      <div class="fire-left">
+        <div class="main-fire"></div>
+        <div class="particle-fire"></div>
+      </div>
+      <div class="fire-center">
+        <div class="main-fire"></div>
+        <div class="particle-fire"></div>
+      </div>
+      <div class="fire-right">
+        <div class="main-fire"></div>
+        <div class="particle-fire"></div>
+      </div>
+      <div class="fire-bottom">
+        <div class="main-fire"></div>
+      </div>
+    </div>
+  </div>
+  <h2 class="loader__text">LOADING...</h2>
+</div>
+<script>
+  import imagesloads from "imagesloaded";
+  import gsap from "gsap";
+  const tl = gsap.timeline();
+  const astro = document.querySelector(".astronaut");
+  const imgLoad = imagesloads("main");
+  const heroImgAfter = document.querySelector(".hero__right--after");
+  const heroImage = document.querySelector(".hero__image");
+
+  imgLoad.on("done", () => {
+    tl.to([".box-of-star1", ".loader__text"], {
+      opacity: 0,
+      duration: 0.5,
+    })
+      .to(
+        ".loader__line",
+        {
+          height: "0%",
+          transformOrigin: "bottom",
+          duration: 0.5,
+          stagger: 0.1,
+          delay: 0.2,
+        },
+        "<"
+      )
+      .fromTo(
+        ".header",
+        {
+          translateY: "-50%",
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          translateY: 0,
+          duration: 0.5,
+          delay: 0.5,
+        },
+        "<"
+      )
+      .to(
+        heroImgAfter,
+        {
+          scaleX: 0,
+          transformOrigin: "right",
+          duration: 1,
+        },
+        "<"
+      )
+      .to(
+        heroImage,
+        {
+          scale: 1,
+          duration: 1.5,
+        },
+        "<"
+      )
+      .to(
+        ".loader",
+        {
+          display: "none",
+        },
+        "<"
+      );
+  });
+</script>

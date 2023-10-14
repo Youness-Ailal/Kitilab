@@ -57,7 +57,7 @@ import heroImg from "/images/hero-image2.avif?url";
 
 <script>
   import gsap from "gsap";
-  
+
   const container = document.querySelector(".hero__title--2");
   window.addEventListener("load", () => {
     container.innerHTML = `
@@ -116,21 +116,6 @@ import heroImg from "/images/hero-image2.avif?url";
   });
 
   const gsapImg = gsap.timeline();
-  const heroImgAfter = document.querySelector(".hero__right--after");
-  const heroImage = document.querySelector(".hero__image");
-  gsapImg.to(heroImgAfter, {
-    scaleX: 0,
-    transformOrigin: "right",
-    duration: 1,
-  });
-  const aniumateImage = gsapImg.to(
-    heroImage,
-    {
-      scale: 1,
-      duration: 1.5,
-    },
-    "=-1"
-  );
 
   const root = document.documentElement;
   let timeout;
