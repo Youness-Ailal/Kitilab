@@ -18,6 +18,8 @@
     "astro-seo": "^0.8.0",
     "gsap": "file:public/gsap-bonus.tgz",
     "gsap-trial": "^3.12.2",
+    "imagesloaded": "^5.0.0",
+    "progress": "^2.0.3",
     "smooth-scrollbar": "^8.8.4",
     "split-text-js": "^1.0.3",
     "swiper": "^10.3.1"
