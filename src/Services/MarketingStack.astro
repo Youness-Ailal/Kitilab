@@ -1,0 +1,242 @@
+---
+import "../styles/devStack.scss";
+import "../styles/moreAbout.scss";
+import Icon from "astro-icon";
+
+import google from "../../public/icons/google-ads.svg?url";
+import facebook from "../../public/icons/facebook.svg?url";
+import tiktok from "../../public/icons/tiktok.svg?url";
+
+import node from "../../public/icons/node.svg?url";
+import java from "../../public/icons/java.svg?url";
+import php from "../../public/icons/php.svg?url";
+import express from "../../public/icons/express.svg?url";
+
+import flutter from "../../public/icons/flutter.svg?url";
+import swift from "../../public/icons/swift.svg?url";
+import kotlin from "../../public/icons/kotlin.svg?url";
+
+import postgresql from "../../public/icons/postgresql.svg?url";
+import mysql from "../../public/icons/mysql.svg?url";
+import mongodb from "../../public/icons/mongodb.svg?url";
+import firebase from "../../public/icons/firebase.svg?url";
+---
+
+<section class="stack">
+  <div class="stack__container">
+    <div class="stack__top">
+      <h2 class="stack__title">TECHNOLOGY<br /> STACK</h2>
+      <div class="categs">
+        <button class="categ categ-active">ADS</button>
+        <button class="categ">SMM</button>
+        <button class="categ">E-MAIL</button>
+        <button class="categ">SEO</button>
+      </div>
+    </div>
+
+    <div class="figures">
+      <div class="figure stack--figure">
+        <img src={google} class="stack--figure__logo" />
+        <p class="figure__text">Google Ads</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src={facebook} class="stack--figure__logo" />
+        <p class="figure__text">Facebook Ads</p>
+        <div class="figure__circle"></div>
+      </div>
+
+      <div class="figure">
+        <img src={tiktok} class="stack--figure__logo" />
+        <p class="figure__text">TikTok Ads</p>
+        <div class="figure__circle"></div>
+      </div>
+      <!-- <div class="figure">
+        <img src={typescript} class="stack--figure__logo" />
+        <p class="figure__text">TypeScript</p>
+        <div class="figure__circle"></div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<script>
+  /* Handles categories */
+  import google from "../../public/icons/google-ads.svg?url";
+  import facebook from "../../public/icons/facebook.svg?url";
+  import tiktok from "../../public/icons/tiktok.svg?url";
+
+  import node from "../../public/icons/node.svg?url";
+  import java from "../../public/icons/java.svg?url";
+  import php from "../../public/icons/php.svg?url";
+  import express from "../../public/icons/express.svg?url";
+
+  import flutter from "../../public/icons/flutter.svg?url";
+  import swift from "../../public/icons/swift.svg?url";
+  import kotlin from "../../public/icons/kotlin.svg?url";
+
+  import postgresql from "../../public/icons/postgresql.svg?url";
+  import mysql from "../../public/icons/mysql.svg?url";
+  import mongodb from "../../public/icons/mongodb.svg?url";
+  import firebase from "../../public/icons/firebase.svg?url";
+  const categsContainer = document.querySelector(".figures");
+
+  const backendMarkup = `
+  <div class="figure stack--figure">
+        <img src=${node} class="stack--figure__logo"  />
+        <p class="figure__text">Node JS</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${express} class="stack--figure__logo"  />
+        <p class="figure__text">Express JS</p>
+        <div class="figure__circle"></div>
+      </div>
+
+      <div class="figure">
+        <img src=${php} class="stack--figure__logo" />
+        <p class="figure__text">PHP</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${java} class="stack--figure__logo" />
+        <p class="figure__text">Java</p>
+        <div class="figure__circle"></div>
+      </div>
+  `;
+  const adsMarkup = `
+  <div class="figure stack--figure">
+        <img src=${google} class="stack--figure__logo"  />
+        <p class="figure__text">Google Ads</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${facebook} class="stack--figure__logo"  />
+        <p class="figure__text">Facebook Ads</p>
+        <div class="figure__circle"></div>
+      </div>
+
+      <div class="figure">
+        <img src=${tiktok} class="stack--figure__logo"  />
+        <p class="figure__text">TikTok Ads</p>
+        <div class="figure__circle"></div>
+      </div>
+      
+  `;
+  const mobileMarkup = `
+  <div class="figure stack--figure">
+        <img src=${flutter} class="stack--figure__logo"  />
+        <p class="figure__text">Flutter</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${swift} class="stack--figure__logo"  />
+        <p class="figure__text">Swift</p>
+        <div class="figure__circle"></div>
+      </div>
+
+      <div class="figure">
+        <img src=${facebook} class="stack--figure__logo"  />
+        <p class="figure__text">React Native</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${kotlin} class="stack--figure__logo"  />
+        <p class="figure__text">Kotlin</p>
+        <div class="figure__circle"></div>
+      </div>`;
+  const databaseMarkup = `
+      <div class="figure stack--figure">
+        <img src=${postgresql} class="stack--figure__logo"  />
+        <p class="figure__text">PostgreSQL</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${mongodb} class="stack--figure__logo"  />
+        <p class="figure__text">Mongodb</p>
+        <div class="figure__circle"></div>
+      </div>
+
+      <div class="figure">
+        <img src=${firebase} class="stack--figure__logo"  />
+        <p class="figure__text">Firebase</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src=${mysql} class="stack--figure__logo"  />
+        <p class="figure__text">MySQL</p>
+        <div class="figure__circle"></div>
+      </div>`;
+
+  const categButtons = document.querySelectorAll(".categ");
+  categButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      categButtons.forEach(el => el.classList.remove("categ-active"));
+      btn.classList.add("categ-active");
+      switch (index) {
+        case 0:
+          categsContainer.innerHTML = adsMarkup;
+          addCircleListeners();
+
+          break;
+        case 1:
+          categsContainer.innerHTML = backendMarkup;
+          addCircleListeners();
+
+          break;
+        case 2:
+          categsContainer.innerHTML = mobileMarkup;
+          addCircleListeners();
+
+          break;
+        case 3:
+          categsContainer.innerHTML = databaseMarkup;
+          addCircleListeners();
+
+          break;
+      }
+    });
+  });
+
+  /* Handels circle move */
+  const handeleMouseEnter = function (e) {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect(),
+      x = ((e.clientX - rect.left) * 100) / 238,
+      y = ((e.clientY - rect.top) * 100) / 238;
+
+    target.style.setProperty("--mouse-x", `${x}%`);
+    target.style.setProperty("--mouse-y", `${y}%`);
+  };
+  const handleCircleMove = function (e) {
+    const { currentTarget: target } = e;
+    const width = target.offsetWidth;
+    const rect = target.getBoundingClientRect();
+    const circleX = e.clientX - rect.left;
+    const circleY = e.clientY - rect.top;
+
+    const centerX = width / 2;
+    const centerY = width / 2;
+
+    const positionX = (circleX - centerX) / 50;
+    const positionY = (circleY - centerY) / 50;
+    target.style.setProperty("--move-x", positionX + "rem");
+    target.style.setProperty("--move-y", positionY + "rem");
+  };
+  const resetePosition = function (e) {
+    const { currentTarget: target } = e;
+
+    target.style.setProperty("--move-x", 0);
+    target.style.setProperty("--move-y", 0);
+  };
+
+  function addCircleListeners() {
+    for (const circle of document.querySelectorAll(".figure")) {
+      (circle as HTMLElement).onmousemove = e => {
+        handeleMouseEnter(e);
+        handleCircleMove(e);
+      };
+    }
+  }
+  addCircleListeners();
+</script>

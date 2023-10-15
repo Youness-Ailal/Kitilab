@@ -1,0 +1,60 @@
+.stack {
+  max-width: 160rem;
+  min-width: 100dvw;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 2rem;
+  margin-top: 15rem;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__container {
+    margin: 0 auto;
+    min-height: 85rem;
+    max-height: 150rem;
+    max-width: 95%;
+    gap: 5rem;
+  }
+  &__title {
+    font-size: 8rem;
+    font-family: radio-bold, sans-serif;
+    line-height: 1.2;
+  }
+}
+.stack--figure {
+  gap: 8rem;
+  &__logo {
+    height: 8rem;
+  }
+  p {
+    font-size: 3.5rem !important;
+  }
+}
+.categs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.categ {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 3rem;
+  font-family: radio-regular, sans-serif;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.2s;
+  &:hover {
+    background-color: #fff;
+    color: #140602;
+  }
+}
+
+.categ-active {
+  background-color: #fff;
+  color: #140602;
+}

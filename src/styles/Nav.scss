@@ -6,10 +6,8 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 2fr 1fr;
-  // justify-content: space-between;
   padding: 2rem;
   border: 1px solid #fff;
-
   border-right: none;
   border-left: none;
 
@@ -164,7 +162,7 @@
 
 .hamburger {
   cursor: pointer;
-  z-index: 999999;
+  z-index: 999;
   @media (min-width: 700px) {
     display: none;
   }

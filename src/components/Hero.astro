@@ -114,24 +114,4 @@ import heroImg from "/images/hero-image2.avif?url";
 
     init();
   });
-
-  const gsapImg = gsap.timeline();
-
-  const root = document.documentElement;
-  let timeout;
-  window.addEventListener("scroll", () => {
-    gsap.to(":root", {
-      "--scroll-color": "#ea580c",
-      duration: 0.5,
-    });
-
-    clearTimeout(timeout);
-
-    timeout = setTimeout(() => {
-      gsap.to(":root", {
-        "--scroll-color": "rgb(234, 88, 12, 0.4)",
-        duration: 0.5,
-      });
-    }, 500);
-  });
 </script>

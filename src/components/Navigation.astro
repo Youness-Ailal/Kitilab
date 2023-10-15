@@ -44,10 +44,10 @@ import Dropdown from "./Dropdown.astro";
     <ul class="mobNav__list hidden">
       <li><a class="mobNav--links" href="/" class="out">HOME</a></li>
       <li>
-        <a class="mobNav--links" href="/" class="out">DEVELOPMENT</a>
+        <a class="mobNav--links" href="Development" class="out">DEVELOPMENT</a>
       </li>
       <li><a class="mobNav--links" href="/" class="out">DESIGN</a></li>
-      <li><a class="mobNav--links" href="/" class="out">MARKETING</a></li>
+      <li><a class="mobNav--links" href="/Marketing" class="out">MARKETING</a></li>
       <li><a class="mobNav--links" href="/" class="out">PROJECTS</a></li>
       <li><a class="mobNav--links" href="/" class="out">REVIEWS</a></li>
       <li class="mobNav__line mobNav__line--1"></li>
@@ -119,21 +119,19 @@ import Dropdown from "./Dropdown.astro";
     gsap.to(".mobNav__line", {
       width: "100%",
       transformOrigin: "left",
-      duration: 0.3,
-      stagger: 0.15,
+      duration: 0.15,
+      stagger: 0.1,
     });
     gsap.fromTo(
       ".mobNav--links",
       {
         translateY: 50,
-        duration: 0.1,
-        stagger: 0.2,
         opacity: 0,
       },
       {
-        duration: 0.1,
-        delay: 0.4,
-        stagger: 0.15,
+        duration: 0.05,
+        delay: 0.3,
+        stagger: 0.1,
         opacity: 1,
         translateY: 0,
         ease: "power1.out",
@@ -152,9 +150,9 @@ import Dropdown from "./Dropdown.astro";
       },
       {
         duration: 0.05,
-        stagger: 0.01,
-        opacity: 0,
         translateY: 50,
+        stagger: 0.05,
+        opacity: 0,
         ease: "power1.out",
       }
     );
@@ -174,6 +172,23 @@ import Dropdown from "./Dropdown.astro";
       hideNav();
     }
   });
-</script>
+  const gsapImg = gsap.timeline();
 
-<style></style>
+  const root = document.documentElement;
+  let timeout;
+  window.addEventListener("scroll", () => {
+    gsap.to(":root", {
+      "--scroll-color": "#ea580c",
+      duration: 0.5,
+    });
+
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      gsap.to(":root", {
+        "--scroll-color": "rgb(234, 88, 12, 0.4)",
+        duration: 0.5,
+      });
+    }, 500);
+  });
+</script>

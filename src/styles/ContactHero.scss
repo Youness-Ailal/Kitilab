@@ -257,8 +257,8 @@
       grid-column: 1;
     }
     span {
-      background-color: #ea580c;
-      height: 4rem;
+      background-color: #fff;
+      height: 3rem;
       border-radius: 50rem;
       display: grid;
       place-content: center;
@@ -266,10 +266,10 @@
     }
     &--icon {
       height: 3rem;
-      color: #fff;
+      color: #ea580c;
     }
     p {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
     }
   }
 }
