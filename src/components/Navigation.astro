@@ -46,8 +46,10 @@ import Dropdown from "./Dropdown.astro";
       <li>
         <a class="mobNav--links" href="Development" class="out">DEVELOPMENT</a>
       </li>
-      <li><a class="mobNav--links" href="/" class="out">DESIGN</a></li>
-      <li><a class="mobNav--links" href="/Marketing" class="out">MARKETING</a></li>
+      <li><a class="mobNav--links" href="/Design" class="out">DESIGN</a></li>
+      <li>
+        <a class="mobNav--links" href="/Marketing" class="out">MARKETING</a>
+      </li>
       <li><a class="mobNav--links" href="/" class="out">PROJECTS</a></li>
       <li><a class="mobNav--links" href="/" class="out">REVIEWS</a></li>
       <li class="mobNav__line mobNav__line--1"></li>
@@ -145,8 +147,8 @@ import Dropdown from "./Dropdown.astro";
       ".mobNav--links",
       {
         translateY: 0,
-        duration: 0.1,
-        stagger: 0.15,
+        duration: 0.05,
+        stagger: 0.1,
       },
       {
         duration: 0.05,
@@ -160,7 +162,7 @@ import Dropdown from "./Dropdown.astro";
       width: 0,
       transformOrigin: "left",
       delay: 0.4,
-      duration: 0.2,
+      duration: 0.15,
       stagger: 0.1,
     });
   };

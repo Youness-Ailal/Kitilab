@@ -10,11 +10,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
   }
   &__container {
     margin: 0 auto;
     min-height: 85rem;
-    max-height: 150rem;
+    // max-height: 150rem;
     max-width: 95%;
     gap: 5rem;
   }
@@ -37,11 +39,12 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .categ {
   background-color: transparent;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-family: radio-regular, sans-serif;
   padding: 1.5rem 4rem;
   border-radius: 10rem;

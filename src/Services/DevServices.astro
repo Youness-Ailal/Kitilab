@@ -1,0 +1,117 @@
+---
+import "../styles/DevServices.scss";
+import Icon from "astro-icon";
+import julia from "/images/julia.jpg?url";
+import whatsapp from "/icons/whatsapp.svg?url";
+---
+
+<section class="services-d">
+  <div class="services-d__container">
+    <h1 class="services-d__title">Tech<br />Services</h1>
+    <div class="services-d__bottom">
+      <div class="services-d__left">
+        <div class="services-d__categ active-service">
+          <p class="services-d__categ--title">WEB DEVELOPMENT</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">SOFTWARE DEVELOPMENT</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">MOBILE DEVELOPMENT</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">NO-CODE DEVELOPMENT</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">CMS DEVELOPMENT</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+      </div>
+      <div class="services-d__right">
+        <p class="services-d__right--text">
+          At the heart of the digital landscape, we're your partner in creating
+          exceptional web experiences. Our web development team transforms your
+          vision into reality, crafting responsive and user-centric websites
+          that make a lasting impact. From stunning design to robust
+          functionality, we specialize in building websites that not only look
+          great but also perform seamlessly.
+        </p>
+        <div class="julia">
+          <div class="julia__left">
+            <img src={julia} alt="julia a lead manager at kitilab" />
+            <div class="julia__info">
+              <p>Julia Alvarez</p>
+              <span>Head of Sales at Kitilab</span>
+            </div>
+          </div>
+          <div class="julia__right">
+            <button class="julia__button"
+              ><span>NEED HELP</span><img
+                src={whatsapp}
+                class="julia__button--icon"
+              /></button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const seviceCategs = document.querySelectorAll(".services-d__categ");
+  const serviceDesc = document.querySelector(".services-d__right--text");
+
+  const webDev =
+    "At the heart of the digital landscape, we're your partner in creating exceptional web experiences. Our web development team transforms your vision into reality, crafting responsive and user-centric websites that make a lasting impact. From stunning design to robust functionality, we specialize in building websites that not only look great but also perform seamlessly.";
+  const softwareDev =
+    "Unlock the full potential of your ideas with our expert software development services. From concept to deployment, our team is dedicated to creating robust, scalable, and high-performance software solutions tailored to your unique needs. With a focus on innovation and cutting-edge technology, we'll turn your vision into reality, delivering software that drives efficiency and empowers your business.";
+  const mobiledev =
+    "Experience the power of mobile with our top-notch development services. Whether it's iOS or Android, we specialize in crafting seamless, feature-rich mobile applications that captivate users and drive engagement. From intuitive user interfaces to flawless functionality, we're your partner in bringing your mobile app dreams to life.";
+  const noCodeDev =
+    "Embrace the future of app development with our no-code solutions. Our platform empowers you to create custom applications without the need for traditional coding. With a user-friendly interface and a vast array of pre-built components, you can rapidly build, deploy, and scale your apps. No technical expertise required - just your vision, and we'll handle the rest.";
+  const cmsDev =
+    "Elevate your online presence with our CMS (Content Management System) development expertise. We design and develop intuitive, user-friendly CMS platforms that simplify content creation, management, and publication. With a focus on scalability and customization, our solutions are tailored to your unique needs, allowing you to efficiently manage your digital content while enhancing user experiences.";
+
+  seviceCategs.forEach((el, i) => {
+    el.addEventListener("click", () => {
+      seviceCategs.forEach(cat => cat.classList.remove("active-service"));
+      el.classList.add("active-service");
+      switch (i) {
+        case 0:
+          serviceDesc.textContent = webDev;
+          break;
+        case 1:
+          serviceDesc.textContent = softwareDev;
+          break;
+        case 2:
+          serviceDesc.textContent = mobiledev;
+          break;
+        case 3:
+          serviceDesc.textContent = noCodeDev;
+          break;
+        case 4:
+          serviceDesc.textContent = cmsDev;
+          break;
+
+        default:
+          serviceDesc.textContent = webDev;
+          break;
+      }
+    });
+  });
+</script>

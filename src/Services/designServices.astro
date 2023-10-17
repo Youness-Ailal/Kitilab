@@ -1,0 +1,116 @@
+---
+import "../styles/DevServices.scss";
+import Icon from "astro-icon";
+import julia from "/images/julia.jpg?url";
+import whatsapp from "/icons/whatsapp.svg?url";
+---
+
+<section class="services-d">
+  <div class="services-d__container">
+    <h1 class="services-d__title">design<br />Services</h1>
+    <div class="services-d__bottom">
+      <div class="services-d__left">
+        <div class="services-d__categ active-service">
+          <p class="services-d__categ--title">UI/UX DESIGN</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">WEB DESIGN</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">MOBILE DESIGN</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">BRANDING</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">LANDING PAGE</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+      </div>
+      <div class="services-d__right">
+        <p class="services-d__right--text">
+          Our company excels in crafting iOS and Android mobile app designs.
+          Focused on optimization and touch-based interactions, we deliver
+          visually stunning, user-friendly interfaces across all devices. Gain a
+          competitive edge with our expertise that keeps users engaged and
+          delighted throughout their journey.
+        </p>
+        <div class="julia">
+          <div class="julia__left">
+            <img src={julia} alt="julia a lead manager at kitilab" />
+            <div class="julia__info">
+              <p>Julia Alvarez</p>
+              <span>Head of Sales at Kitilab</span>
+            </div>
+          </div>
+          <div class="julia__right">
+            <button class="julia__button"
+              ><span>NEED HELP</span><img
+                src={whatsapp}
+                class="julia__button--icon"
+              /></button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const seviceCategs = document.querySelectorAll(".services-d__categ");
+  const serviceDesc = document.querySelector(".services-d__right--text");
+
+  const uiuxDes =
+    "Our company excels in crafting iOS and Android mobile app designs. Focused on optimization and touch-based interactions, we deliver visually stunning, user-friendly interfaces across all devices. Gain a competitive edge with our expertise that keeps users engaged and delighted throughout their journey.";
+  const webeDes =
+    "Elevate your digital presence with our web design expertise. We specialize in crafting visually stunning, user-friendly websites that leave a lasting impression. From elegant aesthetics to intuitive navigation, we ensure that your website not only looks fantastic but also provides an exceptional user experience. Let us turn your vision into a captivating online reality.";
+  const mobileDes =
+    "Embrace the mobile era with our expert mobile design services. We're dedicated to creating seamless, user-centric mobile experiences that captivate your audience. From intuitive interfaces to flawless functionality, our mobile designs are tailored to engage users on the go. Stay ahead in the mobile-first world with our innovative mobile design solutions.";
+  const brandDes =
+    "Your brand is more than just a logo; it's a story waiting to be told. Our branding expertise helps you define and communicate your brand identity effectively. We create distinctive, memorable brand experiences that resonate with your target audience. From logo design to brand strategy, we're here to help you build a brand that stands out in the crowded marketplace.";
+  const landingDes =
+    "Maximize conversions and make a bold statement with our landing page design. We specialize in creating high-impact, conversion-focused landing pages that drive results. Whether you're looking to capture leads, promote a product, or highlight a special offer, our landing pages are designed to optimize user engagement and achieve your marketing goals.";
+
+  seviceCategs.forEach((el, i) => {
+    el.addEventListener("click", () => {
+      seviceCategs.forEach(cat => cat.classList.remove("active-service"));
+      el.classList.add("active-service");
+      switch (i) {
+        case 0:
+          serviceDesc.textContent = uiuxDes;
+          break;
+        case 1:
+          serviceDesc.textContent = webeDes;
+          break;
+        case 2:
+          serviceDesc.textContent = mobileDes;
+          break;
+        case 3:
+          serviceDesc.textContent = brandDes;
+          break;
+        case 4:
+          serviceDesc.textContent = landingDes;
+          break;
+
+        default:
+          serviceDesc.textContent = uiuxDes;
+          break;
+      }
+    });
+  });
+</script>

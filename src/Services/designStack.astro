@@ -1,0 +1,86 @@
+---
+import "../styles/devStack.scss";
+import "../styles/moreAbout.scss";
+import Icon from "astro-icon";
+
+import figma from "../../public/icons/figma.svg?url";
+import sketch from "../../public/icons/sketch.svg?url";
+import adobe from "../../public/icons/adobe.svg?url";
+import miro from "../../public/icons/miro.svg?url";
+---
+
+<section class="stack">
+  <div class="stack__container">
+    <div class="stack__top">
+      <h2 class="stack__title">DESIGN TOOLS</h2>
+    </div>
+
+    <div class="figures">
+      <div class="figure stack--figure">
+        <img src={figma} class="stack--figure__logo" />
+        <p class="figure__text">Figma</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src={sketch} class="stack--figure__logo" />
+        <p class="figure__text">Sketch</p>
+        <div class="figure__circle"></div>
+      </div>
+
+      <div class="figure">
+        <img src={adobe} class="stack--figure__logo" />
+        <p class="figure__text">Adobe XD</p>
+        <div class="figure__circle"></div>
+      </div>
+      <div class="figure">
+        <img src={miro} class="stack--figure__logo" />
+        <p class="figure__text">Miro</p>
+        <div class="figure__circle"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* Handels circle move */
+  const handeleMouseEnter = function (e) {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect(),
+      x = ((e.clientX - rect.left) * 100) / 238,
+      y = ((e.clientY - rect.top) * 100) / 238;
+
+    target.style.setProperty("--mouse-x", `${x}%`);
+    target.style.setProperty("--mouse-y", `${y}%`);
+  };
+  const handleCircleMove = function (e) {
+    const { currentTarget: target } = e;
+    const width = target.offsetWidth;
+    const rect = target.getBoundingClientRect();
+    const circleX = e.clientX - rect.left;
+    const circleY = e.clientY - rect.top;
+
+    const centerX = width / 2;
+    const centerY = width / 2;
+
+    const positionX = (circleX - centerX) / 50;
+    const positionY = (circleY - centerY) / 50;
+    target.style.setProperty("--move-x", positionX + "rem");
+    target.style.setProperty("--move-y", positionY + "rem");
+  };
+  const resetePosition = function (e) {
+    const { currentTarget: target } = e;
+
+    target.style.setProperty("--move-x", 0);
+    target.style.setProperty("--move-y", 0);
+  };
+
+  function addCircleListeners() {
+    for (const circle of document.querySelectorAll(".figure")) {
+      (circle as HTMLElement).onmousemove = e => {
+        handeleMouseEnter(e);
+        handleCircleMove(e);
+      };
+    }
+  }
+  addCircleListeners();
+</script>

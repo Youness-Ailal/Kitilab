@@ -1,0 +1,108 @@
+---
+import "../styles/DevServices.scss";
+import Icon from "astro-icon";
+import julia from "/images/julia.jpg?url";
+import whatsapp from "/icons/whatsapp.svg?url";
+---
+
+<section class="services-d">
+  <div class="services-d__container">
+    <h1 class="services-d__title">Scale<br />Services</h1>
+    <div class="services-d__bottom">
+      <div class="services-d__left">
+        <div class="services-d__categ active-service">
+          <p class="services-d__categ--title">EMAIL MARKETING</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">SEO</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">Content Marketing</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+        <div class="services-d__categ">
+          <p class="services-d__categ--title">Video Marketing</p><Icon
+            class="services-d__categ--icon"
+            name="ep:arrow-right"
+          />
+        </div>
+      </div>
+      <div class="services-d__right">
+        <p class="services-d__right--text">
+          We excels in crafting iOS and Android mobile app designs. Focused on
+          optimization and touch-based interactions, we deliver visually
+          stunning, user-friendly interfaces across all devices. Gain a
+          competitive edge with our expertise that keeps users engaged and
+          delighted throughout their journey.
+        </p>
+        <div class="julia">
+          <div class="julia__left">
+            <img src={julia} alt="julia a lead manager at kitilab" />
+            <div class="julia__info">
+              <p>Julia Alvarez</p>
+              <span>Head of Sales at Kitilab</span>
+            </div>
+          </div>
+          <div class="julia__right">
+            <button class="julia__button"
+              ><span>NEED HELP</span><img
+                src={whatsapp}
+                class="julia__button--icon"
+              /></button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const seviceCategs = document.querySelectorAll(".services-d__categ");
+  const serviceDesc = document.querySelector(".services-d__right--text");
+
+  const emailMark = ` We excels in crafting iOS and Android mobile app designs. Focused on
+          optimization and touch-based interactions, we deliver visually
+          stunning, user-friendly interfaces across all devices. Gain a
+          competitive edge with our expertise that keeps users engaged and
+          delighted throughout their journey.`;
+  const seoMark =
+    "Unlock the power of search engines with our SEO (Search Engine Optimization) expertise. We're dedicated to boosting your online visibility and driving organic traffic to your website. Our SEO strategies are tailored to your unique business goals, ensuring that your content ranks higher and attracts the right audience. Gain an edge in the digital landscape with our data-driven and result-oriented SEO services.";
+  const contentMark =
+    "Craft compelling narratives and connect with your audience through our content marketing services. We specialize in creating and distributing valuable, relevant, and consistent content that resonates with your target audience. From blog posts to infographics and videos, we'll help you tell your brand's story effectively, driving engagement and building lasting relationships with your customers.";
+  const videoMark =
+    "Capture your audience's attention with the power of video marketing. Our team excels in creating visually captivating video content that conveys your message and brand identity. From engaging product demos to impactful brand stories, we'll help you harness the full potential of video to boost brand awareness, drive conversions, and leave a lasting impression on your audience.";
+
+  seviceCategs.forEach((el, i) => {
+    el.addEventListener("click", () => {
+      seviceCategs.forEach(cat => cat.classList.remove("active-service"));
+      el.classList.add("active-service");
+      switch (i) {
+        case 0:
+          serviceDesc.textContent = emailMark;
+          break;
+        case 1:
+          serviceDesc.textContent = seoMark;
+          break;
+        case 2:
+          serviceDesc.textContent = contentMark;
+          break;
+        case 3:
+          serviceDesc.textContent = videoMark;
+          break;
+
+        default:
+          serviceDesc.textContent = emailMark;
+          break;
+      }
+    });
+  });
+</script>

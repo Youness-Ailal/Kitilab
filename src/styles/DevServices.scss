@@ -1,0 +1,339 @@
+:root {
+  --clippy-details-mob: polygon(
+    46.467% 0.152%,
+    2.217% 0.152%,
+    2.217% 0.152%,
+    1.858% 0.192%,
+    1.516% 0.308%,
+    1.198% 0.493%,
+    0.908% 0.741%,
+    0.649% 1.045%,
+    0.428% 1.401%,
+    0.247% 1.8%,
+    0.113% 2.238%,
+    0.029% 2.707%,
+    0% 3.201%,
+    0% 96.951%,
+    0% 96.951%,
+    0.029% 97.446%,
+    0.113% 97.915%,
+    0.247% 98.352%,
+    0.428% 98.752%,
+    0.649% 99.107%,
+    0.908% 99.412%,
+    1.198% 99.66%,
+    1.516% 99.845%,
+    1.858% 99.96%,
+    2.217% 100%,
+    97.783% 100%,
+    97.783% 100%,
+    98.142% 99.96%,
+    98.484% 99.845%,
+    98.802% 99.66%,
+    99.092% 99.412%,
+    99.351% 99.107%,
+    99.572% 98.752%,
+    99.753% 98.352%,
+    99.887% 97.915%,
+    99.971% 97.446%,
+    100% 96.951%,
+    100% 14.242%,
+    100% 14.242%,
+    99.971% 13.748%,
+    99.887% 13.278%,
+    99.753% 12.841%,
+    99.572% 12.441%,
+    99.351% 12.086%,
+    99.092% 11.782%,
+    98.802% 11.534%,
+    98.484% 11.349%,
+    98.142% 11.233%,
+    97.783% 11.193%,
+    58.3% 11.193%,
+    58.3% 11.193%,
+    58.153% 11.187%,
+    58.007% 11.166%,
+    57.862% 11.133%,
+    57.72% 11.087%,
+    57.58% 11.028%,
+    57.444% 10.956%,
+    57.311% 10.873%,
+    57.182% 10.777%,
+    57.057% 10.669%,
+    56.938% 10.55%,
+    47.829% 0.796%,
+    47.829% 0.796%,
+    47.71% 0.677%,
+    47.585% 0.569%,
+    47.457% 0.473%,
+    47.324% 0.389%,
+    47.187% 0.318%,
+    47.047% 0.259%,
+    46.905% 0.213%,
+    46.761% 0.179%,
+    46.614% 0.159%,
+    46.467% 0.152%
+  );
+
+  --clippy-details: polygon(
+    31.867% 0%,
+    4.435% 0%,
+    4.435% 0%,
+    3.715% 0.081%,
+    3.033% 0.315%,
+    2.397% 0.689%,
+    1.816% 1.191%,
+    1.299% 1.808%,
+    0.856% 2.527%,
+    0.495% 3.336%,
+    0.226% 4.222%,
+    0.058% 5.172%,
+    0% 6.173%,
+    0% 93.827%,
+    0% 93.827%,
+    0.058% 94.828%,
+    0.226% 95.778%,
+    0.495% 96.664%,
+    0.856% 97.473%,
+    1.299% 98.192%,
+    1.816% 98.809%,
+    2.397% 99.311%,
+    3.033% 99.685%,
+    3.715% 99.919%,
+    4.435% 100%,
+    95.565% 100%,
+    95.565% 100%,
+    96.285% 99.919%,
+    96.967% 99.685%,
+    97.603% 99.311%,
+    98.184% 98.809%,
+    98.701% 98.192%,
+    99.144% 97.473%,
+    99.505% 96.664%,
+    99.774% 95.778%,
+    99.942% 94.828%,
+    100% 93.827%,
+    100% 16.27%,
+    100% 16.27%,
+    99.942% 15.268%,
+    99.774% 14.319%,
+    99.505% 13.433%,
+    99.144% 12.624%,
+    98.701% 11.905%,
+    98.184% 11.288%,
+    97.603% 10.786%,
+    96.967% 10.412%,
+    96.285% 10.178%,
+    95.565% 10.097%,
+    43.742% 10.097%,
+    43.742% 10.097%,
+    43.431% 10.082%,
+    43.122% 10.036%,
+    42.818% 9.961%,
+    42.519% 9.857%,
+    42.226% 9.725%,
+    41.94% 9.564%,
+    41.663% 9.376%,
+    41.395% 9.162%,
+    41.138% 8.92%,
+    40.892% 8.653%,
+    34.718% 1.444%,
+    34.718% 1.444%,
+    34.472% 1.177%,
+    34.214% 0.935%,
+    33.947% 0.721%,
+    33.669% 0.533%,
+    33.384% 0.372%,
+    33.091% 0.24%,
+    32.792% 0.136%,
+    32.487% 0.061%,
+    32.179% 0.015%,
+    31.867% 0%
+  );
+}
+.services-d {
+  max-width: 160rem;
+  min-width: 100dvw;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 5rem;
+  margin-top: 5rem;
+  color: #140602;
+  @media (max-width: 1000px) {
+    padding: 1rem;
+  }
+  &__container {
+    margin: 0 auto;
+    min-height: 120rem;
+    max-width: 98%;
+    padding: 3rem 6rem;
+    clip-path: var(--clippy-details);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    @media (max-width: 700px) {
+      padding: 2rem 3rem;
+      clip-path: var(--clippy-details-mob);
+    }
+    @media (max-width: 550px) {
+      padding: 2rem 3rem;
+      clip-path: none;
+      border-radius: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+  &__title {
+    font-size: 12rem;
+    font-family: radio-bold, sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    @media (max-width: 1000px) {
+      font-size: 10rem;
+    }
+    @media (max-width: 830px) {
+      font-size: 8rem;
+    }
+  }
+  &__bottom {
+    background-color: #ffedd5;
+    border-radius: 2rem;
+    padding: 3rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 4rem;
+    @media (max-width: 830px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    // gap: 4rem;
+  }
+  &__categ {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #14060280;
+    padding: 3.6rem 0;
+    transition: 0.2s;
+    @media (max-width: 500px) {
+      padding: 2rem 0;
+    }
+    &--title {
+      font-size: 3.6rem;
+      color: #433835;
+      text-transform: uppercase;
+      font-family: radio-medium, sans-serif;
+      transition: 0.2s;
+      @media (max-width: 1000px) {
+        font-size: 3.2rem;
+      }
+      @media (max-width: 850px) {
+        font-size: 3rem;
+      }
+    }
+    &--icon {
+      height: 5rem;
+      transition: 0.2s;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    @media (max-width: 500px) {
+      padding: 1rem 0;
+    }
+    &--text {
+      font-size: 3.2rem;
+      line-height: 1.8;
+      color: #433835;
+      border-bottom: 1px solid #14060280;
+      padding-bottom: 8rem;
+      transition: 0.2s;
+      @media (max-width: 850px) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+.julia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    img {
+      height: 10rem;
+      aspect-ratio: 1;
+      border-radius: 50rem;
+      border: 1px solid #ea580c;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    p {
+      font-size: 3rem;
+    }
+    span {
+      font-size: 2rem;
+      color: #433835;
+    }
+  }
+  &__right {
+    // width: 100%;
+  }
+  &__button {
+    cursor: pointer;
+    padding: 1.5rem 6rem;
+    padding-right: 2rem;
+    font-size: 2.4rem;
+    background-color: #f97316;
+    border: none;
+    border-radius: 50rem;
+    border: 1px solid transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    transition: 0.2s;
+    width: 100%;
+
+    &--icon {
+      height: 4rem;
+      aspect-ratio: 1;
+    }
+    &:hover {
+      background-color: #ea580c;
+    }
+  }
+}
+
+.active-service {
+  .services-d__categ--title {
+    color: #ea580c !important;
+  }
+  .services-d__categ--icon {
+    rotate: -180deg !important;
+    color: #ea580c;
+  }
+}
