@@ -73,6 +73,8 @@ import whatsapp from "/icons/whatsapp.svg?url";
 </section>
 
 <script>
+  import gsap from "gsap";
+  const gsapTl = gsap.timeline();
   const seviceCategs = document.querySelectorAll(".services-d__categ");
   const serviceDesc = document.querySelector(".services-d__right--text");
 
@@ -87,6 +89,20 @@ import whatsapp from "/icons/whatsapp.svg?url";
   const cmsDev =
     "Elevate your online presence with our CMS (Content Management System) development expertise. We design and develop intuitive, user-friendly CMS platforms that simplify content creation, management, and publication. With a focus on scalability and customization, our solutions are tailored to your unique needs, allowing you to efficiently manage your digital content while enhancing user experiences.";
 
+  const animateText = function () {
+    gsapTl
+      .to(".services-d__right--text", {
+        opacity: 0,
+        translateX: -10,
+        duration: 0,
+      })
+      .to(".services-d__right--text", {
+        delay: 0.1,
+        opacity: 1,
+        translateX: 0,
+        duration: 0.1,
+      });
+  };
   seviceCategs.forEach((el, i) => {
     el.addEventListener("click", () => {
       seviceCategs.forEach(cat => cat.classList.remove("active-service"));
@@ -94,22 +110,28 @@ import whatsapp from "/icons/whatsapp.svg?url";
       switch (i) {
         case 0:
           serviceDesc.textContent = webDev;
+          animateText();
           break;
         case 1:
           serviceDesc.textContent = softwareDev;
+          animateText();
           break;
         case 2:
           serviceDesc.textContent = mobiledev;
+          animateText();
           break;
         case 3:
           serviceDesc.textContent = noCodeDev;
+          animateText();
           break;
         case 4:
           serviceDesc.textContent = cmsDev;
+          animateText();
           break;
 
         default:
           serviceDesc.textContent = webDev;
+          animateText();
           break;
       }
     });

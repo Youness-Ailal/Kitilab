@@ -50,7 +50,7 @@
   gap: 5rem;
   background-color: rgb(255, 237, 213, 0.7);
   transition: 0.3s;
-
+  transform: translateY(20rem);
   @media (max-width: 900px) {
     padding: 2rem;
     grid-template-columns: 1fr 0.5fr;

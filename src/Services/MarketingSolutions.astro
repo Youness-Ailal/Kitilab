@@ -1,0 +1,140 @@
+---
+import "../styles/Solutions.scss";
+import Icon from "astro-icon";
+---
+
+<section class="solutions">
+  <div class="solutions__container">
+    <div class="solutions__top">
+      <h1 class="solutions__title">Our<br />solutions</h1>
+    </div>
+    <div class="solutions__mid swiper">
+      <div class="solutions__list solutions__list--wrapper swiper-wrapper">
+        <!-- Solution -->
+
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="mdi:call-to-action" />
+          <h2 class="solution__title">Lead Generation</h2>
+          <p class="solution__text">
+            Develop strategies and campaigns to attract and capture potential
+            customers' contact information for future marketing efforts.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="mdi:business-card-outline" />
+          <h2 class="solution__title">Branding Services</h2>
+          <p class="solution__text">
+            Develop and refine your brand identity, including logo design,
+            messaging, and brand consistency across all channels.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="uit:create-dashboard" />
+          <h2 class="solution__title">Content Creation</h2>
+          <p class="solution__text">
+            Produce high-quality content such as blog posts, articles,
+            infographics, and videos to engage and inform your audience.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="tabler:ad-2" />
+          <h2 class="solution__title">Ad Copywriting</h2>
+          <p class="solution__text">
+            Craft persuasive ad copy that compels users to take action, whether
+            it's clicking, signing up, or making a purchase.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="icon-park-outline:analysis" />
+          <h2 class="solution__title">Competitor Analysis</h2>
+          <p class="solution__text">
+            Analyze and benchmark your marketing efforts against your
+            competitors to identify opportunities and threats.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="carbon:event" />
+          <h2 class="solution__title">Event Promotion</h2>
+          <p class="solution__text">
+            Promote events, both online and offline, to generate buzz, attract
+            attendees, and achieve event goals.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon
+            class="solution__icon"
+            name="fluent:window-ad-person-20-filled"
+          />
+          <h2 class="solution__title">Guerrilla Marketing</h2>
+          <p class="solution__text">
+            Execute unconventional and creative marketing tactics that make a
+            memorable impact on your audience.
+          </p>
+        </figure>
+        <!-- Solution -->
+      </div>
+    </div>
+    <div class="solutions__bottom">
+      <div class="solutions__buttons">
+        <button class="solutions__prev">
+          <Icon
+            class="solutions__icon solutions__icon-1"
+            name="ep:arrow-up-bold"
+          />
+          <Icon
+            class="solutions__icon solutions__icon-1"
+            name="ep:arrow-up-bold"
+          />
+        </button>
+        <button class="solutions__next">
+          <Icon
+            class="solutions__icon solutions__icon-2"
+            name="ep:arrow-up-bold"
+          />
+          <Icon
+            class="solutions__icon solutions__icon-2"
+            name="ep:arrow-up-bold"
+          />
+        </button>
+      </div>
+      <div class="progress">
+        <div class="progress__line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  const progressLine = document.querySelector(".progress__line") as HTMLElement;
+  const nextButton = document.querySelector(".solutions__next") as HTMLElement;
+  const prevButton = document.querySelector(".solutions__prev") as HTMLElement;
+
+  const swiper = new Swiper(".solutions__mid", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    breakpoints: {
+      700: {
+        slidesPerView: "auto",
+        spaceBetween: 50,
+      },
+    },
+  });
+  nextButton.onclick = () => swiper.slideNext();
+  prevButton.onclick = () => swiper.slidePrev();
+
+  swiper.on("slideChange", function () {
+    const progress = (swiper.realIndex + 1) / (swiper.slides.length - 1);
+    progressLine.style.width = progress * 100 + "%";
+
+    if (swiper.realIndex >= 3) {
+      progressLine.style.width = "100%";
+    }
+  });
+</script>

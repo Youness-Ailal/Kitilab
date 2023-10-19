@@ -128,7 +128,28 @@ const alt = "Founder of kitilab";
 
 <script>
   import gsap from "gsap";
-  
+  import ScrollTrigger from "gsap-trial/ScrollTrigger";
+  import SplitType from "split-type";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const desc = document.querySelector(".about__desc");
+  const slpiteddesc = new SplitType(".about__desc", { types: "chars" });
+
+  /* Handels Scroll trigger text */
+  gsap.from(slpiteddesc.chars, {
+    scrollTrigger: {
+      trigger: desc,
+      start: "top 85%",
+      end: "top 30%",
+      scrub: true,
+      markers: false,
+    },
+    opacity: 0.4,
+    stagger: 0.1,
+  });
+
+  /*  */
   const circles = document.querySelectorAll(".figure");
   const figures = document.querySelector(".figures");
   const viewMoreWorks = document.querySelector(".works__right--button");

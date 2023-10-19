@@ -8,11 +8,21 @@ import Icon from "astro-icon";
 <section class="message">
   <div class="message__container">
     <div class="message__left">
-      <h2>LET'S</h2>
-      <h2 class="message__left--colored">BUILD</h2>
-      <h2>AND</h2>
-      <h2 class="message__left--colored">SCALE</h2>
-      <h2>IT</h2>
+      <span class="message__word-container">
+        <h2 class="message__title-word">LET'S</h2>
+      </span>
+      <span class="message__word-container">
+        <h2 class="message__left--colored message__title-word">BUILD</h2>
+      </span>
+      <span class="message__word-container">
+        <h2 class="message__title-word message__title-word">AND</h2>
+      </span>
+      <span class="message__word-container">
+        <h2 class="message__left--colored message__title-word">SCALE</h2>
+      </span>
+      <span class="message__word-container">
+        <h2 class="message__title-word">IT</h2>
+      </span>
     </div>
 
     <div class="message__right">
@@ -72,3 +82,20 @@ import Icon from "astro-icon";
     </div>
   </div>
 </section>
+<script>
+  import gsap from "gsap";
+  const tl = gsap.timeline();
+  tl.to(".message__right", {
+    rotateX: 0,
+    opacity: 1,
+  }).to(
+    ".message__title-word",
+    {
+      translateY: 0,
+      duration: 0.5,
+      stagger: 0.15,
+      ease: "back.out",
+    },
+    "<"
+  );
+</script>

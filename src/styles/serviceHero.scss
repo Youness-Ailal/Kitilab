@@ -320,6 +320,7 @@
   margin: 0 auto;
   margin-top: 5rem;
   padding: 2rem;
+  perspective: 70rem;
   @media (max-width: 750px) {
     padding: 1rem;
   }
@@ -333,6 +334,8 @@
     clip-path: var(--clippy-dev);
     padding: 6rem;
     padding-top: 12rem;
+    transform: rotateX(-15deg);
+    opacity: 0;
     @media (max-width: 900px) {
       min-height: 75rem;
       padding: 4rem;

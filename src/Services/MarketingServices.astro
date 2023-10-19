@@ -66,6 +66,8 @@ import whatsapp from "/icons/whatsapp.svg?url";
 </section>
 
 <script>
+  import gsap from "gsap";
+  const gsapTl = gsap.timeline();
   const seviceCategs = document.querySelectorAll(".services-d__categ");
   const serviceDesc = document.querySelector(".services-d__right--text");
 
@@ -80,7 +82,20 @@ import whatsapp from "/icons/whatsapp.svg?url";
     "Craft compelling narratives and connect with your audience through our content marketing services. We specialize in creating and distributing valuable, relevant, and consistent content that resonates with your target audience. From blog posts to infographics and videos, we'll help you tell your brand's story effectively, driving engagement and building lasting relationships with your customers.";
   const videoMark =
     "Capture your audience's attention with the power of video marketing. Our team excels in creating visually captivating video content that conveys your message and brand identity. From engaging product demos to impactful brand stories, we'll help you harness the full potential of video to boost brand awareness, drive conversions, and leave a lasting impression on your audience.";
-
+  const animateText = function () {
+    gsapTl
+      .to(".services-d__right--text", {
+        opacity: 0,
+        translateX: -10,
+        duration: 0,
+      })
+      .to(".services-d__right--text", {
+        delay: 0.1,
+        opacity: 1,
+        translateX: 0,
+        duration: 0.1,
+      });
+  };
   seviceCategs.forEach((el, i) => {
     el.addEventListener("click", () => {
       seviceCategs.forEach(cat => cat.classList.remove("active-service"));
@@ -88,19 +103,24 @@ import whatsapp from "/icons/whatsapp.svg?url";
       switch (i) {
         case 0:
           serviceDesc.textContent = emailMark;
+          animateText();
           break;
         case 1:
           serviceDesc.textContent = seoMark;
+          animateText();
           break;
         case 2:
           serviceDesc.textContent = contentMark;
+          animateText();
           break;
         case 3:
           serviceDesc.textContent = videoMark;
+          animateText();
           break;
 
         default:
           serviceDesc.textContent = emailMark;
+          animateText();
           break;
       }
     });

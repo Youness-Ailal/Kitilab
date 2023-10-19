@@ -22,6 +22,7 @@
     "progress": "^2.0.3",
     "smooth-scrollbar": "^8.8.4",
     "split-text-js": "^1.0.3",
+    "split-type": "^0.3.3",
     "swiper": "^10.3.1"
   },
   "devDependencies": {

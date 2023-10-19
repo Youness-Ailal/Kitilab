@@ -1,0 +1,146 @@
+---
+import "../styles/Solutions.scss";
+import Icon from "astro-icon";
+---
+
+<section class="solutions">
+  <div class="solutions__container">
+    <div class="solutions__top">
+      <h1 class="solutions__title">Our<br />solutions</h1>
+    </div>
+    <div class="solutions__mid swiper">
+      <div class="solutions__list solutions__list--wrapper swiper-wrapper">
+        <!-- Solution -->
+
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="clarity:devices-line" />
+          <h2 class="solution__title">Responsive Design</h2>
+          <p class="solution__text">
+            Our designs adapt to all screens, providing a seamless journey from
+            desktop to mobile, ensuring your message shines across all devices.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="ant-design:file-search-outlined" />
+          <h2 class="solution__title">SEO</h2>
+          <p class="solution__text">
+            Elevate your online visibility with our SEO expertise. We optimize
+            your website to rank higher in search results, driving organic
+            traffic and boosting your digital presence.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="ph:shopping-cart-light" />
+          <h2 class="solution__title">E-commerce</h2>
+          <p class="solution__text">
+            Empower your online store with our e-commerce solutions. We build
+            secure, user-friendly platforms that drive sales, provide seamless
+            shopping experiences, and enhance customer satisfaction.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="ph:user-focus-light" />
+          <h2 class="solution__title">User Experience</h2>
+          <p class="solution__text">
+            Prioritize user satisfaction. Our UX design enhances product
+            usability, ensuring intuitive interfaces, smooth navigation, and
+            delightful interactions, resulting in higher user retention.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="gg:website" />
+          <h2 class="solution__title">Frontend Design</h2>
+          <p class="solution__text">
+            Craft stunning user interfaces. Our frontend development expertise
+            ensures your web applications are visually appealing, responsive,
+            and user-friendly, delivering exceptional user experiences.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="ant-design:database-outlined" />
+          <h2 class="solution__title">Backend Systems</h2>
+          <p class="solution__text">
+            Powering your digital infrastructure. Our backend development
+            services create robust, scalable, and secure server-side systems
+            that enable seamless data management and application functionality.
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="carbon:api" />
+          <h2 class="solution__title">API Integration</h2>
+          <p class="solution__text">
+            Seamlessly connect your systems and services. Our API development
+            and integration solutions ensure smooth communication
+          </p>
+        </figure>
+        <!-- Solution -->
+        <figure class="solution swiper-slide">
+          <Icon class="solution__icon" name="ic:baseline-security" />
+          <h2 class="solution__title">Security</h2>
+          <p class="solution__text">
+            Safeguard your digital assets with our security solutions. We employ
+            cutting-edge techniques and robust strategies to protect your
+            systems
+          </p>
+        </figure>
+        <!-- Solution -->
+      </div>
+    </div>
+    <div class="solutions__bottom">
+      <div class="solutions__buttons">
+        <button class="solutions__prev">
+          <Icon
+            class="solutions__icon solutions__icon-1"
+            name="ep:arrow-up-bold"
+          />
+          <Icon
+            class="solutions__icon solutions__icon-1"
+            name="ep:arrow-up-bold"
+          />
+        </button>
+        <button class="solutions__next">
+          <Icon
+            class="solutions__icon solutions__icon-2"
+            name="ep:arrow-up-bold"
+          />
+          <Icon
+            class="solutions__icon solutions__icon-2"
+            name="ep:arrow-up-bold"
+          />
+        </button>
+      </div>
+      <div class="progress">
+        <div class="progress__line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  const progressLine = document.querySelector(".progress__line") as HTMLElement;
+  const nextButton = document.querySelector(".solutions__next") as HTMLElement;
+  const prevButton = document.querySelector(".solutions__prev") as HTMLElement;
+
+  const swiper = new Swiper(".solutions__mid", {
+    slidesPerView: "auto",
+    spaceBetween: 50,
+  });
+  nextButton.onclick = () => swiper.slideNext();
+  prevButton.onclick = () => swiper.slidePrev();
+
+  swiper.on("slideChange", function () {
+    const progress = (swiper.realIndex + 1) / (swiper.slides.length - 1);
+    progressLine.style.width = progress * 100 + "%";
+
+    if (swiper.realIndex === 4) {
+      progressLine.style.width = "100%";
+    }
+  });
+</script>

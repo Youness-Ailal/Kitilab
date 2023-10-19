@@ -1,7 +1,9 @@
 ---
 import "../styles/Works.scss";
-import workImage1 from "/images/team-working-animation-project.jpg?url";
-import workImage2 from "/images/hero-image.jpg?url";
+import workImage1 from "/images/ecom1.jpg?url";
+import workImage2 from "/images/ecom2.jpg?url";
+import workImage3 from "/images/brand1.jpg?url";
+import workImage4 from "/images/mobile1.jpg?url";
 import { Icon } from "astro-icon";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -27,11 +29,11 @@ import "swiper/css/navigation";
           <div class="work__left">
             <p class="work__type">ecommerce</p>
             <h2 class="work__title">
-              The Premier Brand in E-sports Apparel Design
+              Lautsprecher the Audio Equipment Online Store Website
             </h2>
             <p class="work__desc">
-              Halo Lab developed a bespoke 3D builder from the ground up for
-              Raven, empowering them to conquer the e-sports industry with their
+              Kitilab developed a bespoke 3D builder from the ground up for
+              Raven, empowering them to conquer the Audio industry with their
               unique e-commerce solution.
             </p>
           </div>
@@ -46,20 +48,57 @@ import "swiper/css/navigation";
         <!-- work 2 -->
         <figure class="work swiper-slide">
           <div class="work__left">
-            <p class="work__type">ecommerce</p>
-            <h2 class="work__title">
-              The Premier Brand in E-sports Apparel Design
-            </h2>
+            <p class="work__type">BRAND</p>
+            <h2 class="work__title">Skyrise Decor Website</h2>
             <p class="work__desc">
-              Halo Lab developed a bespoke 3D builder from the ground up for
-              Raven, empowering them to conquer the e-sports industry with their
-              unique e-commerce solution.
+              Kanizo logo & brand identity design" project encapsulates a
+              seamless blend of minimalist elegance and vibrant symbolism,
+              forging a memorable brand identity.
+            </p>
+          </div>
+          <div class="work__right">
+            <img
+              class="work__image"
+              src={workImage3}
+              alt="team working on animation project"
+            />
+          </div>
+        </figure>
+        <!-- work 3 -->
+        <figure class="work swiper-slide">
+          <div class="work__left">
+            <p class="work__type">Ecommerce</p>
+            <h2 class="work__title">Blay Modern & Ordinal Bicycles</h2>
+            <p class="work__desc">
+              Introducing our bike shop called Blay. Blay is a website that
+              offers its bicycles, including Ordinal
             </p>
           </div>
           <div class="work__right">
             <img
               class="work__image"
               src={workImage2}
+              alt="team working on animation project"
+            />
+          </div>
+        </figure>
+        <!-- work 4 -->
+        <figure class="work swiper-slide">
+          <div class="work__left">
+            <p class="work__type">Mobile</p>
+            <h2 class="work__title">
+              Monetto - The Ultimate Banking App for Freelancers
+            </h2>
+            <p class="work__desc">
+              Manage finances, issue invoices, and track expenses effortlessly.
+              Get special discounts on software like Figma and simplify tax
+              payments.
+            </p>
+          </div>
+          <div class="work__right">
+            <img
+              class="work__image"
+              src={workImage4}
               alt="team working on animation project"
             />
           </div>

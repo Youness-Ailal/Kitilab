@@ -49,3 +49,11 @@ import devimage from "/images/dev-service.jpg?url";
     </div>
   </div>
 </section>
+<script>
+  import gsap from "gsap";
+  const tl = gsap.timeline();
+  tl.to(".dev__container", {
+    rotateX: 0,
+    opacity: 1,
+  });
+</script>

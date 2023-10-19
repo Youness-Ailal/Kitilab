@@ -72,6 +72,9 @@ import whatsapp from "/icons/whatsapp.svg?url";
 </section>
 
 <script>
+  import gsap from "gsap";
+
+  const gsapTl = gsap.timeline();
   const seviceCategs = document.querySelectorAll(".services-d__categ");
   const serviceDesc = document.querySelector(".services-d__right--text");
 
@@ -86,6 +89,20 @@ import whatsapp from "/icons/whatsapp.svg?url";
   const landingDes =
     "Maximize conversions and make a bold statement with our landing page design. We specialize in creating high-impact, conversion-focused landing pages that drive results. Whether you're looking to capture leads, promote a product, or highlight a special offer, our landing pages are designed to optimize user engagement and achieve your marketing goals.";
 
+  const animateText = function () {
+    gsapTl
+      .to(".services-d__right--text", {
+        opacity: 0,
+        translateX: -10,
+        duration: 0,
+      })
+      .to(".services-d__right--text", {
+        delay: 0.1,
+        opacity: 1,
+        translateX: 0,
+        duration: 0.1,
+      });
+  };
   seviceCategs.forEach((el, i) => {
     el.addEventListener("click", () => {
       seviceCategs.forEach(cat => cat.classList.remove("active-service"));
@@ -93,22 +110,28 @@ import whatsapp from "/icons/whatsapp.svg?url";
       switch (i) {
         case 0:
           serviceDesc.textContent = uiuxDes;
+          animateText();
           break;
         case 1:
           serviceDesc.textContent = webeDes;
+          animateText();
           break;
         case 2:
           serviceDesc.textContent = mobileDes;
+          animateText();
           break;
         case 3:
           serviceDesc.textContent = brandDes;
+          animateText();
           break;
         case 4:
           serviceDesc.textContent = landingDes;
+          animateText();
           break;
 
         default:
           serviceDesc.textContent = uiuxDes;
+          animateText();
           break;
       }
     });

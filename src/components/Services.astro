@@ -93,3 +93,20 @@ import Icon from "astro-icon";
     </div>
   </div>
 </section>
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap-trial/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(".offer", {
+    scrollTrigger: {
+      trigger: ".offer",
+      start: "top 95%",
+      end: "top 20%",
+      scrub: true,
+      markers: false,
+    },
+    translateY: 0,
+    stagger: 0.1,
+  });
+</script>
