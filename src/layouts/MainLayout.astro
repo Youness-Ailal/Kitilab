@@ -1,13 +1,12 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Myfooter from "../components/Myfooter.astro";
-
+import favicon from "../../public/favicon.png?url";
 interface Props {
   titleProp: string;
   description?: string;
 }
 
-import banner from "/images/hero-images2.avif?url";
 const {
   titleProp,
   description = "Kitilab a Digital Solution Agency based in Morocco, Agadir",
@@ -20,7 +19,11 @@ import { SEO } from "astro-seo";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="shortcut icon"
+      href="../../public/images/favicon.png"
+      type="image/x-icon"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <SEO
@@ -43,7 +46,7 @@ import { SEO } from "astro-seo";
     <script>
       import Lenis from "@studio-freight/lenis";
       const lenis = new Lenis({
-        duration: 1.4,
+        duration: 1.5,
       });
 
       lenis.on("scroll", e => {});

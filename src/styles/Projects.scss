@@ -1,0 +1,508 @@
+:root {
+  --clippy-projects-mob: polygon(
+    48.866% 4.948%,
+    94.836% 4.948%,
+    94.836% 4.948%,
+    95.597% 5.016%,
+    96.32% 5.213%,
+    96.993% 5.529%,
+    97.608% 5.953%,
+    98.155% 6.473%,
+    98.625% 7.08%,
+    99.007% 7.763%,
+    99.291% 8.51%,
+    99.469% 9.311%,
+    99.531% 10.156%,
+    99.531% 94.271%,
+    99.531% 94.271%,
+    99.469% 95.116%,
+    99.291% 95.917%,
+    99.007% 96.664%,
+    98.625% 97.347%,
+    98.155% 97.954%,
+    97.608% 98.474%,
+    96.993% 98.898%,
+    96.32% 99.214%,
+    95.597% 99.411%,
+    94.836% 99.479%,
+    5.164% 99.479%,
+    5.164% 99.479%,
+    4.403% 99.411%,
+    3.68% 99.214%,
+    3.007% 98.898%,
+    2.392% 98.474%,
+    1.845% 97.954%,
+    1.375% 97.347%,
+    0.994% 96.664%,
+    0.709% 95.917%,
+    0.531% 95.116%,
+    0.469% 94.271%,
+    0.469% 5.729%,
+    0.469% 5.729%,
+    0.531% 4.884%,
+    0.709% 4.083%,
+    0.994% 3.336%,
+    1.375% 2.653%,
+    1.845% 2.046%,
+    2.392% 1.526%,
+    3.007% 1.102%,
+    3.68% 0.786%,
+    4.403% 0.589%,
+    5.164% 0.521%,
+    37.754% 0.521%,
+    37.754% 0.521%,
+    37.947% 0.525%,
+    38.14% 0.538%,
+    38.332% 0.56%,
+    38.522% 0.591%,
+    38.712% 0.63%,
+    38.9% 0.678%,
+    39.085% 0.735%,
+    39.269% 0.8%,
+    39.451% 0.873%,
+    39.63% 0.955%,
+    46.99% 4.514%,
+    46.99% 4.514%,
+    47.169% 4.596%,
+    47.35% 4.669%,
+    47.534% 4.734%,
+    47.72% 4.79%,
+    47.908% 4.838%,
+    48.097% 4.878%,
+    48.288% 4.908%,
+    48.48% 4.93%,
+    48.673% 4.943%,
+    48.866% 4.948%
+  );
+
+  --clippy-projects-right: polygon(
+    37.059% 6.569%,
+    94.836% 6.569%,
+    94.836% 6.569%,
+    95.597% 6.647%,
+    96.32% 6.874%,
+    96.993% 7.237%,
+    97.608% 7.724%,
+    98.155% 8.323%,
+    98.625% 9.02%,
+    99.007% 9.805%,
+    99.291% 10.664%,
+    99.469% 11.585%,
+    99.531% 12.557%,
+    99.531% 93.413%,
+    99.531% 93.413%,
+    99.469% 94.384%,
+    99.291% 95.306%,
+    99.007% 96.165%,
+    98.625% 96.95%,
+    98.155% 97.647%,
+    97.608% 98.246%,
+    96.993% 98.733%,
+    96.32% 99.096%,
+    95.597% 99.323%,
+    94.836% 99.401%,
+    5.164% 99.401%,
+    5.164% 99.401%,
+    4.403% 99.323%,
+    3.68% 99.096%,
+    3.007% 98.733%,
+    2.392% 98.246%,
+    1.845% 97.647%,
+    1.375% 96.95%,
+    0.994% 96.165%,
+    0.709% 95.306%,
+    0.531% 94.384%,
+    0.469% 93.413%,
+    0.469% 6.587%,
+    0.469% 6.587%,
+    0.531% 5.616%,
+    0.709% 4.694%,
+    0.994% 3.835%,
+    1.375% 3.05%,
+    1.845% 2.353%,
+    2.392% 1.754%,
+    3.007% 1.267%,
+    3.68% 0.904%,
+    4.403% 0.677%,
+    5.164% 0.599%,
+    27.345% 0.599%,
+    27.345% 0.599%,
+    27.63% 0.61%,
+    27.912% 0.643%,
+    28.192% 0.697%,
+    28.468% 0.773%,
+    28.74% 0.869%,
+    29.007% 0.987%,
+    29.268% 1.124%,
+    29.523% 1.282%,
+    29.77% 1.459%,
+    30.009% 1.656%,
+    34.394% 5.511%,
+    34.394% 5.511%,
+    34.634% 5.708%,
+    34.881% 5.886%,
+    35.136% 6.043%,
+    35.397% 6.181%,
+    35.664% 6.298%,
+    35.935% 6.395%,
+    36.212% 6.47%,
+    36.491% 6.525%,
+    36.774% 6.558%,
+    37.059% 6.569%
+  );
+
+  --clippy-projects-left: polygon(
+    63.092% 6.587%,
+    5.164% 6.587%,
+    5.164% 6.587%,
+    4.403% 6.665%,
+    3.68% 6.892%,
+    3.007% 7.255%,
+    2.392% 7.742%,
+    1.845% 8.341%,
+    1.375% 9.038%,
+    0.994% 9.823%,
+    0.709% 10.682%,
+    0.531% 11.604%,
+    0.469% 12.575%,
+    0.469% 93.713%,
+    0.469% 93.713%,
+    0.531% 94.684%,
+    0.709% 95.605%,
+    0.994% 96.464%,
+    1.375% 97.249%,
+    1.845% 97.947%,
+    2.392% 98.545%,
+    3.007% 99.032%,
+    3.68% 99.395%,
+    4.403% 99.622%,
+    5.164% 99.701%,
+    95.07% 99.701%,
+    95.07% 99.701%,
+    95.832% 99.622%,
+    96.554% 99.395%,
+    97.228% 99.032%,
+    97.843% 98.545%,
+    98.39% 97.947%,
+    98.859% 97.249%,
+    99.241% 96.464%,
+    99.526% 95.605%,
+    99.704% 94.684%,
+    99.765% 93.713%,
+    99.765% 6.587%,
+    99.765% 6.587%,
+    99.704% 5.616%,
+    99.526% 4.694%,
+    99.241% 3.835%,
+    98.859% 3.05%,
+    98.39% 2.353%,
+    97.843% 1.754%,
+    97.228% 1.267%,
+    96.554% 0.904%,
+    95.832% 0.677%,
+    95.07% 0.599%,
+    72.823% 0.599%,
+    72.823% 0.599%,
+    72.539% 0.61%,
+    72.256% 0.643%,
+    71.976% 0.697%,
+    71.7% 0.773%,
+    71.428% 0.87%,
+    71.161% 0.987%,
+    70.9% 1.125%,
+    70.645% 1.283%,
+    70.398% 1.46%,
+    70.158% 1.657%,
+    65.757% 5.528%,
+    65.757% 5.528%,
+    65.518% 5.725%,
+    65.271% 5.903%,
+    65.016% 6.061%,
+    64.755% 6.199%,
+    64.488% 6.316%,
+    64.216% 6.413%,
+    63.94% 6.488%,
+    63.66% 6.543%,
+    63.377% 6.576%,
+    63.092% 6.587%
+  );
+}
+.projects {
+  max-width: 160rem;
+  min-width: 100vw;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 2rem;
+  &__container {
+    margin: 0 auto;
+    margin-top: 8rem;
+    max-width: 92%;
+    min-height: 70rem;
+    max-height: 75rem;
+    // overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    gap: 5rem;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__left,
+  &__right {
+    height: 100%;
+  }
+  &__left {
+    clip-path: var(--clippy-projects-left);
+    background: linear-gradient(140deg, #ea580c 25.08%, #f97316 100%);
+    background-size: cover;
+    padding: 5rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 900px) {
+      clip-path: var(--clippy-projects-mob);
+    }
+    &--button {
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 5rem;
+      background-color: #facc15;
+      color: #140602;
+      border-radius: 20rem;
+      position: relative;
+      min-width: 25rem;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      font-family: radio-medium;
+      overflow: hidden;
+      &:hover .projects__left--bottom-icon-1 {
+        transform: translateY(5rem);
+        opacity: 0;
+      }
+      &:hover .projects__left--bottom-icon-2 {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    &--bottom {
+      border-top: 1px solid #fff;
+      margin-top: auto;
+      padding-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+      h2 {
+        font-size: 8rem;
+        @media (max-width: 1000px) {
+          font-size: 7rem;
+        }
+      }
+      p {
+        font-size: 3rem;
+        font-family: radio-medium;
+        text-transform: uppercase;
+        line-height: 1.2;
+        @media (max-width: 1000px) {
+          font-size: 2.6rem;
+        }
+      }
+
+      &-icon {
+        height: 3rem;
+        position: absolute;
+        right: 10%;
+        transition: 0.2s ease-out;
+        &-2 {
+          opacity: 0;
+          transform: translateY(-5rem);
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: radio-bold, sans-serif;
+    font-size: 14rem;
+    line-height: 1;
+    @media (max-width: 1250px) {
+      font-size: 13rem;
+    }
+    @media (max-width: 1100px) {
+      font-size: 12rem;
+    }
+    @media (max-width: 1000px) {
+      font-size: 10rem;
+    }
+  }
+  &__right {
+    background-color: #fff;
+    clip-path: var(--clippy-projects-right);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @media (max-width: 900px) {
+      display: none;
+    }
+    &--container,
+    &--slide,
+    &--wraper {
+      height: 100%;
+      width: 100%;
+    }
+    &:hover img {
+      scale: 1.05;
+    }
+
+    &--top {
+      height: 70%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+    }
+    &--bottom {
+      height: 30%;
+      padding: 2rem 4rem;
+      margin-bottom: 4rem;
+      color: #140602;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      span {
+        font-size: 2rem;
+        font-family: radio-semi, sans-serif;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 1rem 3rem;
+        border-radius: 20rem;
+        color: transparent;
+        background: linear-gradient(45deg, #ea580c 10%, #f97316 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+    &--type {
+      font-size: 2.4rem;
+      font-family: radio-light, sans-serif;
+      text-transform: uppercase;
+    }
+    &--title {
+      font-size: 3.6rem;
+    }
+  }
+  &__desc {
+    margin-top: 10rem;
+    font-size: 5rem;
+    padding: 10rem;
+    font-family: radio-regular, sans-serif;
+    max-width: 54ch;
+    @media (max-width: 1250px) {
+      padding: 8rem;
+      font-size: 4.5rem;
+    }
+    @media (max-width: 1100px) {
+      padding: 6rem;
+      font-size: 4rem;
+    }
+    @media (max-width: 1000px) {
+      padding: 4rem;
+      font-size: 3.5rem;
+    }
+    @media (max-width: 700px) {
+      padding: 3rem;
+      font-size: 3rem;
+    }
+  }
+}
+.projects__list {
+  margin: 0 auto;
+  max-width: 170rem;
+  padding: 4rem;
+  display: grid;
+  padding-top: 10rem;
+  align-items: center;
+  justify-items: center;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  margin-bottom: 20rem;
+}
+.project {
+  // background-color: #999;
+  cursor: pointer;
+  clip-path: var(--clippy-projects-left);
+  max-height: 55rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 1;
+  transition: 0.5s;
+  &:hover &__image img {
+    scale: 1.05;
+  }
+  &:hover &__icon:last-child {
+    translate: 0;
+    opacity: 1;
+  }
+  &:hover &__icon:first-child {
+    translate: 5rem -5rem;
+    opacity: 0;
+  }
+  &__image {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+  }
+  &__title {
+    color: #fff;
+    font-size: 4rem;
+  }
+  &__bottom {
+    padding: 0 1rem;
+  }
+  &__icon {
+    height: 6rem;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 0.2s ease-out;
+    &:last-child {
+      translate: -5rem 5rem;
+      opacity: 0;
+    }
+    &--container {
+      height: 6rem;
+      aspect-ratio: 1;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.out-focus {
+  opacity: 0.5;
+}
