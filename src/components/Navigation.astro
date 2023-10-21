@@ -87,6 +87,7 @@ import Dropdown from "./Dropdown.astro";
   const nav = document.querySelector("nav");
   const navCheckbox = document.querySelector(".nav__menu-checkbox");
   const navLinks = document.querySelectorAll(".mobNav--links");
+  const menuButtonLbael = document.querySelector(".nav__menu-button");
 
   function move(x: string, width?: string) {
     line.style.opacity = "1";
@@ -172,8 +173,10 @@ import Dropdown from "./Dropdown.astro";
     const checked = (e.target as HTMLInputElement).checked;
     if (checked) {
       showNav();
+      (menuButtonLbael as HTMLElement).style.position = "fixed";
     } else {
       hideNav();
+      (menuButtonLbael as HTMLElement).style.position = "static";
     }
   });
   const gsapImg = gsap.timeline();
