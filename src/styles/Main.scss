@@ -31,6 +31,7 @@
 html {
   font-size: clamp(6px, 0.5vw, 10px);
   -webkit-tap-highlight-color: transparent;
+  scroll-speed: 2;
 }
 body {
   background-color: #140602;

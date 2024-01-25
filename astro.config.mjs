@@ -5,7 +5,7 @@ import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://kitilab.netlify.app/",
+  site: "https://kitilab.ailal.app",
   integrations: [
     compress({
       html: true,

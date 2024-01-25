@@ -20,7 +20,6 @@ import { SEO } from "astro-seo";
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href={favicon} type="image/x-icon" />
-    <link rel="sitemap" href="../../public/sitemap-index.xml" />
     <link rel="sitemap" href="../../public/sitemap-0.xml" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -44,7 +43,7 @@ import { SEO } from "astro-seo";
     <script>
       import Lenis from "@studio-freight/lenis";
       const lenis = new Lenis({
-        duration: 1.5,
+        duration: 1.4,
       });
 
       lenis.on("scroll", e => {});
