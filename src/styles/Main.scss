@@ -31,7 +31,6 @@
 html {
   font-size: clamp(6px, 0.5vw, 10px);
   -webkit-tap-highlight-color: transparent;
-  scroll-speed: 2;
 }
 body {
   background-color: #140602;
@@ -47,18 +46,17 @@ li {
   font-family: inherit;
   transition: 0.3s;
 }
-button:active,
-a:active {
+button:active {
   scale: 0.95;
 }
 
 ::-webkit-scrollbar {
-  width: 1.5rem;
+  width: 1.2rem;
   transition: 0.2s;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-color);
-  border-radius: 10rem;
+  border-radius: 0.4rem;
   transition: 0.3s;
   &:hover {
     background-color: rgb(234, 88, 12, 1);

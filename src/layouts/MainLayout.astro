@@ -36,11 +36,12 @@ import { SEO } from "astro-seo";
   </head>
   <body>
     <Navigation />
-    <main>
+    <main class="smooth-wrapper">
       <slot />
     </main>
     <Myfooter />
-    <script>
+
+    <!-- <script>
       import Lenis from "@studio-freight/lenis";
       const lenis = new Lenis({
         duration: 1.4,
@@ -54,6 +55,6 @@ import { SEO } from "astro-seo";
       }
 
       requestAnimationFrame(raf);
-    </script>
+    </script> -->
   </body>
 </html>
