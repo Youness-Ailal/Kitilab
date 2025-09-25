@@ -268,20 +268,20 @@
   }
   &__title {
     color: #fff;
-    font-size: 9rem;
+    font-size: 7rem;
     line-height: 1;
     font-family: radio-bold, sans-serif;
     border-bottom: 2px solid #fed7aa;
     padding-bottom: 5rem;
 
     @media (max-width: 780px) {
-      font-size: 8rem;
-    }
-    @media (max-width: 950px) {
       font-size: 6rem;
     }
-    @media (max-width: 480px) {
+    @media (max-width: 950px) {
       font-size: 5rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 4rem;
     }
     &--2 {
       display: flex;
